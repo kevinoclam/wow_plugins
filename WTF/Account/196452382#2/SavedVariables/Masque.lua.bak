@@ -1,0 +1,10 @@
+
+MasqueDB = {
+	["profileKeys"] = {
+		["奏端雨 - 白银之手"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+		},
+	},
+}

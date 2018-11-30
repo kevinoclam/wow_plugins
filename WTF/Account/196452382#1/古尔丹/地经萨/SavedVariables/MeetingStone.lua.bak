@@ -1,0 +1,10 @@
+
+MEETINGSTONE_CHARACTER_DB = {
+	["profileKeys"] = {
+		["地经萨 - 古尔丹"] = "地经萨 - 古尔丹",
+	},
+	["profiles"] = {
+		["地经萨 - 古尔丹"] = {
+		},
+	},
+}

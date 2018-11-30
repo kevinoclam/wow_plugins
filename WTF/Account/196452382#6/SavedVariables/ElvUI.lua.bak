@@ -1,0 +1,416 @@
+
+ElvDB = {
+	["profileKeys"] = {
+		["币开头小德 - 古尔丹"] = "币开头小德 - 古尔丹",
+	},
+	["gold"] = {
+		["古尔丹"] = {
+			["币开头小德"] = 37142630,
+		},
+	},
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["worldBoss"] = {
+		["币开头小德-古尔丹"] = {
+			["class"] = "SHAMAN",
+			["realm"] = "古尔丹",
+		},
+		["reset"] = true,
+	},
+	["profiles"] = {
+		["币开头小德 - 古尔丹"] = {
+			["general"] = {
+				["backdropfadecolor"] = {
+					["b"] = 0.054,
+					["g"] = 0.054,
+					["r"] = 0.054,
+				},
+				["valuecolor"] = {
+					["b"] = 0.819,
+					["g"] = 0.513,
+					["r"] = 0.09,
+				},
+				["bordercolor"] = {
+					["b"] = 0.1,
+					["g"] = 0.1,
+					["r"] = 0.1,
+				},
+			},
+			["layoutSet"] = "healer",
+			["auras"] = {
+				["wrapAfter"] = 10,
+			},
+			["lowresolutionset"] = true,
+			["movers"] = {
+				["ElvUF_PlayerMover"] = "BOTTOMElvUIParentBOTTOM-118142",
+				["ElvUF_RaidpetMover"] = "TOPLEFTElvUIParentBOTTOMLEFT4736",
+				["ShiftAB"] = "TOPLEFTElvUIParentBOTTOMLEFT4740",
+				["PetAB"] = "RIGHTElvUIParentRIGHT-800",
+				["ElvUF_FocusMover"] = "BOTTOMElvUIParentBOTTOM310332",
+				["ElvAB_2"] = "BOTTOMElvUIParentBOTTOM038",
+				["ElvAB_1"] = "BOTTOMElvUIParentBOTTOM04",
+				["ElvAB_3"] = "BOTTOMElvUIParentBOTTOM072",
+				["ElvAB_4"] = "RIGHTElvUIParentRIGHT-40",
+				["ElvUF_PetMover"] = "BOTTOMElvUIParentBOTTOM-11884",
+				["ElvUF_RaidMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4195",
+				["ElvUF_PartyMover"] = "BOTTOMLEFTElvUIParentBOTTOMLEFT4225",
+				["ElvAB_5"] = "RIGHTElvUIParentRIGHT-380",
+				["ElvUF_TargetMover"] = "BOTTOMElvUIParentBOTTOM118142",
+				["ElvUF_TargetTargetMover"] = "BOTTOMElvUIParentBOTTOM11884",
+			},
+			["AuraWatch"] = {
+				["myclass"] = "SHAMAN",
+				["loadDefault"] = true,
+				["DB"] = {
+					{
+						["Direction"] = "RIGHT",
+						["Name"] = "玩家减益",
+						["List"] = {
+							{
+								["AuraID"] = 118,
+								["UnitID"] = "player",
+							}, -- [1]
+						},
+						["Interval"] = 10,
+						["Mode"] = "ICON",
+						["IconSize"] = 48,
+						["Pos"] = {
+							"CENTER", -- [1]
+							"UIParent", -- [2]
+							"CENTER", -- [3]
+							-200, -- [4]
+							200, -- [5]
+						},
+					}, -- [1]
+					{
+						["Direction"] = "RIGHT",
+						["Name"] = "玩家重要增益",
+						["List"] = {
+							{
+								["AuraID"] = 16246,
+								["UnitID"] = "player",
+							}, -- [1]
+							{
+								["AuraID"] = 77762,
+								["UnitID"] = "player",
+							}, -- [2]
+							{
+								["AuraID"] = 118522,
+								["UnitID"] = "player",
+							}, -- [3]
+							{
+								["AuraID"] = 53390,
+								["UnitID"] = "player",
+							}, -- [4]
+							{
+								["AuraID"] = 126697,
+								["UnitID"] = "player",
+							}, -- [5]
+							{
+								["AuraID"] = 126649,
+								["UnitID"] = "player",
+							}, -- [6]
+							{
+								["AuraID"] = 126599,
+								["UnitID"] = "player",
+							}, -- [7]
+							{
+								["AuraID"] = 126554,
+								["UnitID"] = "player",
+							}, -- [8]
+							{
+								["AuraID"] = 126690,
+								["UnitID"] = "player",
+							}, -- [9]
+							{
+								["AuraID"] = 126707,
+								["UnitID"] = "player",
+							}, -- [10]
+							{
+								["AuraID"] = 126605,
+								["UnitID"] = "player",
+							}, -- [11]
+							{
+								["AuraID"] = 126683,
+								["UnitID"] = "player",
+							}, -- [12]
+							{
+								["AuraID"] = 126705,
+								["UnitID"] = "player",
+							}, -- [13]
+							{
+								["AuraID"] = 126659,
+								["UnitID"] = "player",
+							}, -- [14]
+							{
+								["AuraID"] = 126577,
+								["UnitID"] = "player",
+							}, -- [15]
+							{
+								["AuraID"] = 126588,
+								["UnitID"] = "player",
+							}, -- [16]
+							{
+								["AuraID"] = 125489,
+								["UnitID"] = "player",
+							}, -- [17]
+							{
+								["AuraID"] = 118334,
+								["UnitID"] = "player",
+							}, -- [18]
+							{
+								["AuraID"] = 104993,
+								["UnitID"] = "player",
+							}, -- [19]
+							{
+								["AuraID"] = 125487,
+								["UnitID"] = "player",
+							}, -- [20]
+						},
+						["Interval"] = 6,
+						["Mode"] = "ICON",
+						["IconSize"] = 42,
+						["Pos"] = {
+							"BOTTOMLEFT", -- [1]
+							"ElvUF_Player", -- [2]
+							"TOPLEFT", -- [3]
+							0, -- [4]
+							55, -- [5]
+						},
+					}, -- [2]
+					{
+						["Direction"] = "RIGHT",
+						["Name"] = "玩家增益",
+						["List"] = {
+							{
+								["AuraID"] = 53817,
+								["UnitID"] = "player",
+							}, -- [1]
+							{
+								["AuraID"] = 30823,
+								["UnitID"] = "player",
+							}, -- [2]
+							{
+								["AuraID"] = 324,
+								["UnitID"] = "player",
+							}, -- [3]
+							{
+								["AuraID"] = 16166,
+								["UnitID"] = "player",
+							}, -- [4]
+							{
+								["AuraID"] = 114050,
+								["UnitID"] = "player",
+							}, -- [5]
+							{
+								["AuraID"] = 79206,
+								["UnitID"] = "player",
+							}, -- [6]
+							{
+								["AuraID"] = 73683,
+								["UnitID"] = "player",
+							}, -- [7]
+							{
+								["AuraID"] = 73685,
+								["UnitID"] = "player",
+							}, -- [8]
+							{
+								["AuraID"] = 31616,
+								["UnitID"] = "player",
+							}, -- [9]
+							{
+								["AuraID"] = 114893,
+								["UnitID"] = "player",
+							}, -- [10]
+							{
+								["AuraID"] = 108281,
+								["UnitID"] = "player",
+							}, -- [11]
+							{
+								["AuraID"] = 108271,
+								["UnitID"] = "player",
+							}, -- [12]
+						},
+						["Interval"] = 6,
+						["Mode"] = "ICON",
+						["IconSize"] = 42,
+						["Pos"] = {
+							"BOTTOMLEFT", -- [1]
+							"ElvUF_Player", -- [2]
+							"TOPLEFT", -- [3]
+							0, -- [4]
+							12, -- [5]
+						},
+					}, -- [3]
+					{
+						["Direction"] = "RIGHT",
+						["Name"] = "目标减益",
+						["List"] = {
+							{
+								["AuraID"] = 17364,
+								["UnitID"] = "target",
+								["Caster"] = "player",
+							}, -- [1]
+							{
+								["AuraID"] = 8056,
+								["UnitID"] = "target",
+								["Caster"] = "player",
+							}, -- [2]
+							{
+								["AuraID"] = 8050,
+								["UnitID"] = "target",
+								["Caster"] = "player",
+							}, -- [3]
+							{
+								["AuraID"] = 77661,
+								["UnitID"] = "target",
+								["Caster"] = "player",
+							}, -- [4]
+							{
+								["AuraID"] = 64695,
+								["UnitID"] = "target",
+								["Caster"] = "player",
+							}, -- [5]
+							{
+								["AuraID"] = 76780,
+								["UnitID"] = "target",
+								["Caster"] = "player",
+							}, -- [6]
+						},
+						["Interval"] = 4,
+						["Mode"] = "ICON",
+						["IconSize"] = 48,
+						["Pos"] = {
+							"BOTTOMLEFT", -- [1]
+							"ElvUF_Target", -- [2]
+							"TOPLEFT", -- [3]
+							0, -- [4]
+							68, -- [5]
+						},
+					}, -- [4]
+				},
+			},
+			["actionbar"] = {
+				["euiabstyle"] = "Low",
+				["bar2"] = {
+					["enabled"] = true,
+				},
+				["bar3"] = {
+					["buttons"] = 12,
+					["backdrop"] = false,
+					["buttonsPerRow"] = 12,
+				},
+				["bar5"] = {
+					["buttons"] = 12,
+					["backdrop"] = false,
+					["buttonsPerRow"] = 1,
+				},
+				["bar1"] = {
+					["heightMult"] = 3,
+				},
+				["bar4"] = {
+					["widthMult"] = 2,
+				},
+			},
+			["unitframe"] = {
+				["fontSize"] = 10,
+				["unitframeType"] = 8,
+				["units"] = {
+					["boss"] = {
+						["power"] = {
+							["width"] = "spaced",
+						},
+					},
+					["focus"] = {
+						["power"] = {
+							["width"] = "spaced",
+						},
+					},
+					["target"] = {
+						["portrait"] = {
+							["overlay"] = false,
+						},
+						["aurabar"] = {
+							["enable"] = false,
+						},
+						["power"] = {
+							["width"] = "spaced",
+						},
+					},
+					["raid"] = {
+						["power"] = {
+							["width"] = "spaced",
+						},
+					},
+					["party"] = {
+						["power"] = {
+							["width"] = "spaced",
+						},
+					},
+					["player"] = {
+						["debuffs"] = {
+							["attachTo"] = "BUFFS",
+						},
+						["portrait"] = {
+							["overlay"] = false,
+						},
+						["aurabar"] = {
+							["enable"] = false,
+						},
+						["power"] = {
+							["width"] = "spaced",
+						},
+						["buffs"] = {
+							["noDuration"] = false,
+							["attachTo"] = "FRAME",
+							["enable"] = true,
+						},
+					},
+					["targettarget"] = {
+						["power"] = {
+							["width"] = "spaced",
+						},
+					},
+				},
+				["colors"] = {
+					["auraBarBuff"] = {
+						["b"] = 0.1,
+						["g"] = 0.1,
+						["r"] = 0.1,
+					},
+					["castClassColor"] = true,
+					["castColor"] = {
+						["b"] = 0.1,
+						["g"] = 0.1,
+						["r"] = 0.1,
+					},
+					["health"] = {
+						["b"] = 0.1,
+						["g"] = 0.1,
+						["r"] = 0.1,
+					},
+				},
+			},
+			["datatexts"] = {
+				["panels"] = {
+					["LeftChatDataPanel"] = {
+						["left"] = "Spell/Heal Power",
+					},
+				},
+			},
+		},
+	},
+}
+ElvPrivateDB = {
+	["profileKeys"] = {
+		["币开头小德 - 古尔丹"] = "币开头小德 - 古尔丹",
+	},
+	["profiles"] = {
+		["币开头小德 - 古尔丹"] = {
+			["install_complete"] = "8.18",
+			["theme"] = "default",
+		},
+	},
+}

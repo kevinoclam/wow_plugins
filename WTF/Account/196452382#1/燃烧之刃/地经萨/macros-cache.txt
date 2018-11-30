@@ -1,0 +1,76 @@
+VER 3 0100000000000004 "DB_druid_bala_st" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_druid_bala_st
+END
+VER 3 0100000000000005 "DB_Feral-AoE" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_Feral-AoE
+END
+VER 3 0100000000000007 "DB_Feral-ST" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_Feral-ST
+END
+VER 3 0100000000000008 "DB_feralaoe" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_feralaoe
+END
+VER 3 0100000000000006 "DB_feralsingle" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_feralsingle
+END
+VER 3 0100000000000009 "DB_KTNDRUAOEHEALS" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_KTNDRUAOEHEALS
+END
+VER 3 010000000000000B "DB_KTNDRUHEALS" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_KTNDRUHEALS
+END
+VER 3 010000000000000A "DB_KTNRestoBoom" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_KTNRestoBoom
+END
+VER 3 010000000000000C "DB_RestoBoomer" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_RestoBoomer
+END
+VER 3 010000000000000D "Feral-MT" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click Feral-MT
+END
+VER 3 010000000000000E "Feral-ST" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click Feral-ST
+END
+VER 3 0100000000000011 "Guardian_MT" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click Guardian_MT
+END
+VER 3 0100000000000010 "Moonkin_MT" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click Moonkin_MT
+END
+VER 3 010000000000000F "Moonkin_ST" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click Moonkin_ST
+END
+VER 3 0100000000000014 "化身狂暴" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast 化身：艾露恩之眷
+/cast 狂暴
+END
+VER 3 0100000000000013 "超凡狂暴" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast 超凡之盟
+/cast 狂暴
+END
+VER 3 0100000000000003 "阳炎&驱散" "236216"
+#showtooltip
+/cast [harm] 阳炎术
+/cast [help] 清除腐蚀
+END
+VER 3 0100000000000012 "驱散阳炎" "236288"
+#showtooltips
+/cast 超凡之盟
+/cast 狂暴
+END

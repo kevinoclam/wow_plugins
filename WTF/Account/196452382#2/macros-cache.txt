@@ -1,0 +1,61 @@
+VER 3 0000000000000006 "1" "Spell_Nature_Rune"
+/click PVPQueueFrameCategoryButton2
+/click ConquestJoinButton
+/run RetrieveCorpse()
+/click MerchantGuildBankRepairButton 
+/run RepairAllItems()
+/run RepopMe()
+/click GossipTitleButton1
+/use [mod:shift]小巧的财宝箱
+/use [mod:shift]被劫的财宝
+END
+VER 3 0000000000000007 "2" "INV_MISC_QUESTIONMARK"
+#show 破胆怒吼
+/run LFDReadyCheckPopup.YesButton:Click()
+/click PVPReadyDialogEnterBattleButton
+/click StaticPopup1Button1
+/run CloseMerchant()
+/use [mod:alt]炉石
+END
+VER 3 0000000000000017 "3" "INV_MISC_QUESTIONMARK"
+#show 剑在人在
+/run LeaveBattlefield() 
+/run ResetInstances()
+END
+VER 3 0000000000000018 "4" "INV_MISC_QUESTIONMARK"
+/use [nomod]风暴之锤
+/use [mod:shift]狂怒回复
+/use [mod:shift]剑在人在
+END
+VER 3 0000000000000019 "5" "INV_MISC_QUESTIONMARK"
+/use [nomod]冲锋
+/use [mod:shift]破胆怒吼
+END
+VER 3 000000000000001A "6" "INV_MISC_QUESTIONMARK"
+#show 剑刃风暴
+/use [combat]13
+/use [combat]14
+/use 剑刃风暴
+END
+VER 3 000000000000001E "7" "INV_MISC_QUESTIONMARK"
+/use 斩杀
+END
+VER 3 000000000000001D "8" "INV_MISC_QUESTIONMARK"
+/use 狂风打击
+END
+VER 3 000000000000001C "9" "INV_MISC_QUESTIONMARK"
+/use 怒击
+END
+VER 3 000000000000001B "a" "INV_MISC_QUESTIONMARK"
+#show 嗜血
+/use 狂暴之怒
+/use 鲁莽
+/use 嗜血
+END
+VER 3 000000000000001F "b" "INV_MISC_QUESTIONMARK"
+/use [stance:2]战斗姿态
+/use [stance:1]乘胜追击
+END
+VER 3 0000000000000020 "c" "INV_MISC_QUESTIONMARK"
+/use [nomod]战斗怒吼
+END

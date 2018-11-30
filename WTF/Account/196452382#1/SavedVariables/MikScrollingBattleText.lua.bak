@@ -1,0 +1,29 @@
+
+MSBTProfiles_SavedVars = {
+	["userDisabled"] = true,
+	["profiles"] = {
+		["Default"] = {
+			["critFontSize"] = 38,
+			["enableBlizzardDamage"] = false,
+			["scrollAreas"] = {
+				["Incoming"] = {
+					["offsetX"] = -500,
+					["offsetY"] = -150,
+				},
+				["Outgoing"] = {
+					["offsetX"] = 450,
+					["offsetY"] = -150,
+				},
+			},
+			["critOutlineIndex"] = 3,
+			["enableBlizzardHealing"] = false,
+			["creationVersion"] = "5.7.142",
+		},
+	},
+}
+MSBT_SavedMedia = {
+	["fonts"] = {
+	},
+	["sounds"] = {
+	},
+}

@@ -1,0 +1,74 @@
+VER 3 0100000000000012 "1" "967538"
+#show 德拉诺强效力量合剂
+/use 德拉诺强效力量合剂
+END
+VER 3 0100000000000013 "1" "967555"
+#show 治疗滋补剂
+/use 治疗滋补剂
+END
+VER 3 0100000000000014 "1" "134400"
+/cast 选矿
+/use 矿名
+END
+VER 3 0100000000000015 "1" "134400"
+/tar Aristseus
+/cast 禁锢
+END
+VER 3 0100000000000011 "1" "644389"
+/Y FS海德需要分担
+/Y FS海德需要分担
+/Y FS海德需要分担
+/Y FS海德需要分担
+/Y FS海德需要分担
+END
+VER 3 0100000000000016 "11" "134400"
+/下跪
+END
+VER 3 0100000000000017 "11" "135846"
+#show 寒冰箭
+/cast 水流喷射
+/cast 寒冰箭
+/petattack
+END
+VER 3 0100000000000018 "11" "134430"
+#show 14
+END
+VER 3 0100000000000019 "123" "236288"
+#showtoolstip 自然之愈
+/cast [mod,target=player][target=mouseover,help,nodead][help,nodead][nogroup,target=player][target=targettarget,help,nodead]自然之愈
+END
+VER 3 0100000000000009 "DB_Blood" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_Blood
+END
+VER 3 010000000000000A "DB_BloodDK" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_BloodDK
+END
+VER 3 010000000000000E "DB_DBFrost" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_DBFrost
+END
+VER 3 010000000000000D "DB_DF" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_DF
+END
+VER 3 010000000000000C "DB_DKunholy" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_DKunholy
+END
+VER 3 010000000000000F "DB_FDK2" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_FDK2
+END
+VER 3 010000000000000B "DB_SquishyDK" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_SquishyDK
+END
+VER 3 0100000000000008 "凋零" "SPELL_SHADOW_DEATHANDDECAY"
+#showtooltip
+/cast [mod,@player] [@cursor] 枯萎凋零
+END
+VER 3 0100000000000010 "群拉" "ABILITY_DEATHKNIGHT_AOEDEATHGRIP"
+/cast [target=@尊严德] 血魔之握
+END

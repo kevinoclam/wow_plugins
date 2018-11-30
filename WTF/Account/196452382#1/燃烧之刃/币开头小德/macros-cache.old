@@ -1,0 +1,39 @@
+VER 3 0100000000000023 "地震术" "451165"
+#showtooltip
+/cast [mod,@player] [@cursor] 地震术
+END
+VER 3 0100000000000022 "岩浆图腾" "971079"
+#showtooltip
+/cast [mod,@player] [@cursor] 岩浆图腾
+END
+VER 3 010000000000000C "波" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]治疗波
+END
+VER 3 010000000000000D "涌" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]治疗之涌
+END
+VER 3 010000000000000E "激流" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]激流
+END
+VER 3 0100000000000020 "灵魂先祖" "ABILITY_SHAMAN_ANCESTRALGUIDANCE"
+#showtooltips
+/cast 灵魂行者的恩赐
+/cast 先祖指引
+END
+VER 3 0100000000000021 "玄牛" "INV_MISC_QUESTIONMARK"
+/tar 玄牛雕像
+END
+VER 3 0100000000000024 "选择分身" "INV_MISC_QUESTIONMARK"
+/tar 玄牛雕像
+END
+VER 3 010000000000001D "释放" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]生命释放
+END
+VER 3 010000000000000F "链子" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]治疗链;
+END

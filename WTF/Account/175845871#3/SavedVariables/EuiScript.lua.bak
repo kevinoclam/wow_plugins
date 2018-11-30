@@ -1,0 +1,64 @@
+
+ACHIEVEMENTSEARCH_DB = nil
+DejaCharacterStatsDB = nil
+TalentProfilesGlobalDB = {
+	["DEATHKNIGHT"] = {
+		["specs"] = {
+		},
+	},
+}
+WorldQuestTipsData = {
+	["画甲肖张-燃烧之刃"] = {
+		["reps"] = {
+			[1828] = "|cffffd100中立 0k /3k|r",
+			[1948] = "|cffffd100中立 0k /3k|r",
+			[1900] = "|cffffd100中立 0k /3k|r",
+			[1883] = "|cffffd100中立 0k /3k|r",
+			[1859] = "|cffffd100中立 0k /3k|r",
+			[1894] = "|cffffd100中立 0k /3k|r",
+		},
+		["info"] = {
+			["class"] = "DEATHKNIGHT",
+			["name"] = "画甲肖张",
+			["level"] = 100,
+		},
+		["worldQuestPartial"] = {
+		},
+	},
+	["global"] = {
+		["pets"] = {
+			["ff"] = {
+			},
+		},
+		["options"] = {
+			["enigmaticHUDSize"] = 32,
+			["useEnigmaticHUD"] = true,
+			["enigmaticRows"] = 3,
+			["enigmaticSize"] = 6,
+			["enigmaticHUDPos"] = "CENTER",
+			["enigmaticPos"] = "CENTER",
+			["TomTomMP"] = true,
+			["PetFF"] = true,
+			["showTimes"] = true,
+			["enigmaticHUDPathDim"] = true,
+			["TomTomLR"] = true,
+			["showAltRepOnItems"] = true,
+			["enigmaticHUDPathA"] = 0.1,
+			["hideSmallGold"] = true,
+			["enigmaticHUDMove"] = true,
+			["showExalted"] = true,
+			["useEnigmatic"] = true,
+			["debugging"] = false,
+			["TomTomAQ"] = true,
+			["enigmaticHUDEdgeA"] = 0.3,
+			["hideSmallGoldThreshold"] = 10,
+			["EditOnC"] = true,
+			["showRepOnItems"] = true,
+			["enigmaticMove"] = true,
+			["showCurrentRep"] = true,
+		},
+		["worldQuests"] = {
+		},
+	},
+	["version"] = 1.21,
+}

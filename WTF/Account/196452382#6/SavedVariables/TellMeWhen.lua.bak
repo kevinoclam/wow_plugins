@@ -1,0 +1,33 @@
+
+TellMeWhenDB = {
+	["profileKeys"] = {
+		["币开头小德 - 古尔丹"] = "币开头小德 - 古尔丹",
+	},
+	["global"] = {
+		["TextLayouts"] = {
+			["icon1"] = {
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+			},
+			["bar2"] = {
+				{
+				}, -- [1]
+				{
+				}, -- [2]
+			},
+		},
+	},
+	["Version"] = 73301,
+	["profiles"] = {
+		["币开头小德 - 古尔丹"] = {
+			["Version"] = 73301,
+			["Groups"] = {
+				{
+					["GUID"] = "TMW:group:1LZgjNljFUPR",
+				}, -- [1]
+			},
+		},
+	},
+}

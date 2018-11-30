@@ -1,0 +1,5 @@
+TellMeWhen: disabled
+WeakAuras: disabled
+Recount: disabled
+_Cursor: disabled
+TellMeWhen_Options: enabled

@@ -1,0 +1,13 @@
+
+ElvCharacterDB = {
+	["ChatEditHistory"] = {
+		" O_O", -- [1]
+		"/s O_O", -- [2]
+		"/g 挂月火", -- [3]
+		"/g 我只是上线看看技能", -- [4]
+		"/myslot", -- [5]
+		"/wa", -- [6]
+	},
+	["ChatHistoryLog"] = {
+	},
+}

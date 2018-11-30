@@ -1,0 +1,17 @@
+
+MasterPlanPC = {
+	["moE"] = 0.75,
+	["moN"] = 1,
+	["moV"] = 0.1875,
+	["goldRewardThreshold"] = 0,
+	["version"] = "20150909A",
+	["moC"] = 1,
+	["complete"] = {
+	},
+	["goldCollected"] = 2750000,
+}
+SVPC_GarrisonMissionManager = {
+	["ingored_followers"] = {
+	},
+}
+FollowerAssignCheck = false

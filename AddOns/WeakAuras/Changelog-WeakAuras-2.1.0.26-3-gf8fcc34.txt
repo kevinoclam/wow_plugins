@@ -1,0 +1,4 @@
+Benjamin Staneck:
+	- 4 spaces => 2 spaces in Transmission.lua
+	- Update README.md
+	- local a function

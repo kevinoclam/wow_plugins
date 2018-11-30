@@ -1,0 +1,32 @@
+VER 3 0100000000000015 "加速" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]迅如猛虎
+END
+VER 3 0100000000000007 "氤氲" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover,help][]氤氲之雾
+END
+VER 3 0100000000000008 "活血" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover,help][]活血术
+END
+VER 3 0100000000000013 "猛虎幻灭" "INV_MISC_QUESTIONMARK"
+/castsequence reset=8/combat 猛虎掌,猛虎掌,猛虎掌,幻灭踢
+END
+VER 3 0100000000000009 "贯通" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/tar mouseover
+/cast 抚慰之雾
+END
+VER 3 0100000000000016 "雕像" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] 青龙雕像
+END
+VER 3 0100000000000006 "雾" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]复苏之雾
+END
+VER 3 0100000000000014 "驱散" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover,help][]清创生血
+END

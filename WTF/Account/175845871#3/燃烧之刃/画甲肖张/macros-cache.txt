@@ -1,0 +1,12 @@
+VER 3 0100000000000001 "DB_Blood" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_Blood
+END
+VER 3 0100000000000002 "DB_BloodDK" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_BloodDK
+END
+VER 3 0100000000000003 "DB_SquishyDK" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/click DB_SquishyDK
+END

@@ -1,0 +1,9 @@
+
+SV_GarrisonMissionManager = nil
+MasterPlanAG = {
+	["白银之手"] = {
+		["奏端雨"] = {
+			["lastCacheTime"] = 1446386867,
+		},
+	},
+}

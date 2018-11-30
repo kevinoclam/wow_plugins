@@ -1,0 +1,13 @@
+VER 3 0100000000000003 "吹风" "SPELL_FROST_ARCTICWINDS"
+#showtooltips 凛风冲击
+/cast [@mouseover]凛风冲击;凛风冲击;
+END
+VER 3 0100000000000002 "爆发宏" "ABILITY_DEATHKNIGHT_PILLAROFFROST"
+#showtooltips 冰霜之柱
+/cast 冰霜之柱
+/cast 血性狂怒
+/use 13
+END
+VER 3 0100000000000001 "龙喷" "SPELL_DEATHKNIGHT_BREATHOFSINDRAGOSA"
+/cast !冰龙吐息
+END

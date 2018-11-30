@@ -1,0 +1,11 @@
+
+MEETINGSTONE_CHARACTER_DB = {
+	["profileKeys"] = {
+		["迪达克范特西 - 燃烧之刃"] = "迪达克范特西 - 燃烧之刃",
+	},
+	["profiles"] = {
+		["迪达克范特西 - 燃烧之刃"] = {
+			["version"] = "80000.06",
+		},
+	},
+}

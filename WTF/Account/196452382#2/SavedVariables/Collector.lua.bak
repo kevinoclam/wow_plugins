@@ -1,0 +1,17 @@
+
+COLLECTOR_DB = {
+	["profileKeys"] = {
+		["黑胡子白腕子 - 白银之手"] = "黑胡子白腕子 - 白银之手",
+	},
+	["global"] = {
+		["firstLogin"] = false,
+		["realmFeed"] = {
+			["白银之手"] = {
+			},
+		},
+	},
+	["profiles"] = {
+		["黑胡子白腕子 - 白银之手"] = {
+		},
+	},
+}

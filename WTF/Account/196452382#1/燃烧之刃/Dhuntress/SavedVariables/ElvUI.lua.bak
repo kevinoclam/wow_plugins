@@ -1,0 +1,17 @@
+
+ElvCharacterDB = {
+	["ChatEditHistory"] = {
+		"/4 123456", -- [1]
+		"/g 暴击", -- [2]
+		"/g dps要暴击，t貌似急速？", -- [3]
+		"/g 不是很清楚", -- [4]
+		"/myslot", -- [5]
+		"/sleep", -- [6]
+		"/wa", -- [7]
+		"/i 刚说完共仇恨啊。。。", -- [8]
+		"/dance", -- [9]
+		"/p xiexie", -- [10]
+	},
+	["ChatHistoryLog"] = {
+	},
+}

@@ -1,0 +1,4 @@
+VER 3 0100000000000001 "警戒" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [@mouseover,help][help,nodead][@player]  警戒
+END

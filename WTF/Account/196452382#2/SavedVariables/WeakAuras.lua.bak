@@ -1,0 +1,118 @@
+
+WeakAurasSaved = {
+	["displays"] = {
+	},
+	["registered"] = {
+	},
+	["talent_cache"] = {
+		["HUNTER"] = {
+		},
+		["WARRIOR"] = {
+			{
+				["name"] = "主宰",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_BullRush",
+			}, -- [1]
+			{
+				["name"] = "再度冲锋",
+				["icon"] = "Interface\\Icons\\INV_Misc_Horn_04",
+			}, -- [2]
+			{
+				["name"] = "战神",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Warbringer",
+			}, -- [3]
+			{
+				["name"] = "狂怒回复",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_FocusedRage",
+			}, -- [4]
+			{
+				["name"] = "复苏之风",
+				["icon"] = "Interface\\Icons\\Ability_Hunter_Harass",
+			}, -- [5]
+			{
+				["name"] = "胜利在望",
+				["icon"] = "Interface\\Icons\\spell_impending_victory",
+			}, -- [6]
+			{
+				["name"] = "血之气息",
+				["icon"] = "Interface\\Icons\\Ability_Rogue_HungerforBlood",
+			}, -- [7]
+			{
+				["name"] = "猝死",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_ImprovedDisciplines",
+			}, -- [8]
+			{
+				["name"] = "猛击",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_DecisiveStrike",
+			}, -- [9]
+			{
+				["name"] = "风暴之锤",
+				["icon"] = "Interface\\Icons\\warrior_talent_icon_stormbolt",
+			}, -- [10]
+			{
+				["name"] = "震荡波",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Shockwave",
+			}, -- [11]
+			{
+				["name"] = "巨龙怒吼",
+				["icon"] = "Interface\\Icons\\ability_warrior_dragonroar",
+			}, -- [12]
+			{
+				["name"] = "群体反射",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_ShieldBreak",
+			}, -- [13]
+			{
+				["name"] = "捍卫",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Safeguard",
+			}, -- [14]
+			{
+				["name"] = "警戒",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Vigilance",
+			}, -- [15]
+			{
+				["name"] = "天神下凡",
+				["icon"] = "Interface\\Icons\\warrior_talent_icon_avatar",
+			}, -- [16]
+			{
+				["name"] = "浴血奋战",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_BloodBath",
+			}, -- [17]
+			{
+				["name"] = "剑刃风暴",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Bladestorm",
+			}, -- [18]
+			{
+				["name"] = "愤怒掌控",
+				["icon"] = "Interface\\Icons\\warrior_talent_icon_angermanagement",
+			}, -- [19]
+			{
+				["name"] = "破坏者",
+				["icon"] = "Interface\\Icons\\warrior_talent_icon_ravager",
+			}, -- [20]
+			{
+				["name"] = "破城者",
+				["icon"] = "Interface\\Icons\\inv_mace_2h_draenorguard_b_01_horde",
+			}, -- [21]
+		},
+		["ROGUE"] = {
+		},
+		["MAGE"] = {
+		},
+		["PRIEST"] = {
+		},
+		["WARLOCK"] = {
+		},
+		["PALADIN"] = {
+		},
+		["DEATHKNIGHT"] = {
+		},
+		["DRUID"] = {
+		},
+		["MONK"] = {
+		},
+		["SHAMAN"] = {
+		},
+	},
+	["tempIconCache"] = {
+	},
+	["login_squelch_time"] = 10,
+}

@@ -1,0 +1,9 @@
+
+MasterPlanPC = {
+	["version"] = "20170203A",
+}
+SVPC_GarrisonMissionManager = {
+	["ignored_followers"] = {
+	},
+}
+FollowerAssignCheck = nil

@@ -1,0 +1,15 @@
+
+MasterPlanPC = {
+	["version"] = "20150625A",
+	["moE"] = 2.72,
+	["moC"] = 3,
+	["moN"] = 4,
+	["moV"] = 0.7578,
+	["complete"] = {
+	},
+}
+SVPC_GarrisonMissionManager = {
+	["ingored_followers"] = {
+	},
+}
+FollowerAssignCheck = false

@@ -1,0 +1,109 @@
+VER 3 000000000000001F "00" "INV_MISC_QUESTIONMARK"
+/tar 公主猫
+END
+VER 3 0000000000000014 "2层天赋" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/use 真气波
+/use 禅意珠
+/use 真气爆裂
+/run SetMacroSpell("2层天赋", GetSpellInfo"真气波" or  GetSpellInfo"禅意珠" or "真气爆裂")
+END
+VER 3 0000000000000020 "daduan" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/y 333333333333
+/cast 切喉手
+END
+VER 3 0000000000000021 "MillHelper" "Ability_Miling"
+/click MillHelperButton
+END
+VER 3 0000000000000015 "免伤天赋" "INV_MISC_QUESTIONMARK"
+#showtooltip 
+/use 躯不坏 
+/use 散魔功 
+/run local G=GetSpellInfo SetMacroSpell("免伤天赋", G("躯不坏") or "散魔功")
+END
+VER 3 000000000000001B "切姿态" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [stance:1] 神鹤式;[stance:2] 灵龙式
+ 
+END
+VER 3 000000000000001C "复苏" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [@mouseover,help]复苏之雾
+END
+VER 3 0000000000000018 "毁灭英勇" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/施放 毁灭打击
+/施放 英勇打击
+END
+VER 3 000000000000001D "毛线" "INV_MISC_QUESTIONMARK"
+#showtooltips 
+/targetraid [group] 
+/cast [@mouseover,help][help,nodead][@player] 抚慰之雾
+END
+VER 3 0000000000000002 "玄牛群嘲" "MONK_STANCE_DRUNKENOX"
+#showtooltip 嚎镇八方
+/stopcasting
+/target 玄牛雕像
+/cast 嚎镇八方
+/targetlastenemy
+END
+VER 3 0000000000000012 "目标猛虎" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [@秣丶,help] [help [] 迅如猛虎
+END
+VER 3 000000000000000B "目标禅意珠" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [@focus] 升腾之雾
+END
+VER 3 000000000000001A "禅意2" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/tar 黑炎之主宰
+/cast 禅意珠
+END
+VER 3 0000000000000007 "药水还魂" "SPELL_MONK_REVIVAL"
+#showtooltips 
+/stopcasting
+/use 德拉诺智力药水
+/cast 还魂术
+END
+VER 3 0000000000000016 "跑虎" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [@牛奶酒,help] [help [] 迅如猛虎
+END
+VER 3 0000000000000017 "跟随突" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/follow @黑羽家的猫
+/cast 真气突
+END
+VER 3 000000000000000A "近战" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/castsequence reset=14/combat  贯日击,贯日击,贯日击,贯日击,贯日击,真气破,猛虎掌,升腾之雾,旭日东升踢
+END
+VER 3 0000000000000010 "还魂" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/stopcasting
+/cast 还魂术
+END
+VER 3 0000000000000009 "远程" "INV_MISC_QUESTIONMARK"
+#showtooltips 
+/castsequence reset=9/combat  升腾之雾,升腾之雾,升腾之雾,升腾之雾,真气破,真气破
+END
+VER 3 000000000000001E "选择目标" "INV_MISC_QUESTIONMARK"
+/tar 格罗姆卡重装步兵
+END
+VER 3 0000000000000019 "选择目标禅意" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/tar 黑炎之主宰
+/cast 禅意珠
+END
+VER 3 0000000000000013 "随机雾" "INV_MISC_QUESTIONMARK"
+#showtooltips 
+/targetraid [group] 
+/cast [@mouseover,help][help,nodead][@player] 复苏之雾 
+/targetlasttarget [help]
+END
+VER 3 0000000000000003 "雷光升腾" "MONK_ABILITY_FISTOFFURY"
+/cast 雷光聚神茶
+/cast 升腾之雾
+END

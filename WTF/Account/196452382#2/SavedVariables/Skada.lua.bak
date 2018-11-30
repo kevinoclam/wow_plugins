@@ -1,0 +1,26 @@
+
+SkadaDB = {
+	["namespaces"] = {
+		["LibDualSpec-1.0"] = {
+		},
+	},
+	["hasUpgraded"] = true,
+	["profileKeys"] = {
+		["黑胡子白腕子 - 白银之手"] = "Default",
+	},
+	["profiles"] = {
+		["Default"] = {
+			["ffoptions"] = {
+				["ignoredefensive"] = true,
+				["ignoreability"] = false,
+			},
+			["windows"] = {
+				{
+					["y"] = -1.525878906250e-005,
+					["point"] = "CENTER",
+					["x"] = 6.1035156250e-005,
+				}, -- [1]
+			},
+		},
+	},
+}

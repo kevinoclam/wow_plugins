@@ -1,0 +1,2 @@
+ElvUI_EverySecondCounts: disabled
+MeetingStone: enabled

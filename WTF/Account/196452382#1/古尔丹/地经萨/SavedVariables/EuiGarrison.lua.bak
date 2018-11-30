@@ -1,0 +1,12 @@
+
+MasterPlanPC = {
+	["complete"] = {
+	},
+	["version"] = "20150625A",
+	["goldRewardThreshold"] = 0,
+}
+SVPC_GarrisonMissionManager = {
+	["ingored_followers"] = {
+	},
+}
+FollowerAssignCheck = false
