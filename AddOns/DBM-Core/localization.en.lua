@@ -9,7 +9,8 @@ DBM_CORE_LOAD_GUI_ERROR				= "Could not load GUI: %s"
 DBM_CORE_LOAD_GUI_COMBAT			= "GUI cannot be initially loaded in combat. GUI will be loaded out of combat. After GUI loaded, you can open GUI in combat."
 DBM_CORE_BAD_LOAD					= "DBM has detected your mod for this instance failed to fully load correctly because of combat. As soon as you are out of combat, please do /console reloadui as soon as possible."
 DBM_CORE_LOAD_MOD_VER_MISMATCH		= "%s could not be loaded because your DBM-Core does not meet requirements. An updated version is required"
-DBM_CORE_LOAD_MOD_EXP_MISMATCH		= "%s could not be loaded because it is designed for a WoW expansion that's not currently available. When new expansion becomes available, this mod will automatically work."
+DBM_CORE_LOAD_MOD_EXP_MISMATCH		= "%s could not be loaded because it is designed for a WoW expansion that's not currently available. When expansion becomes available, this mod will automatically work."
+DBM_CORE_LOAD_MOD_TOC_MISMATCH		= "%s could not be loaded because it is designed for a WoW patch (%s) that's not currently available. When patch becomes available, this mod will automatically work."
 DBM_CORE_LOAD_MOD_DISABLED			= "%s is installed but currently disabled. This mod will not be loaded unless you enable it."
 DBM_CORE_LOAD_MOD_DISABLED_PLURAL	= "%s are installed but currently disabled. These mods will not be loaded unless you enable them."
 
@@ -18,7 +19,7 @@ DBM_COPY_URL_DIALOG					= "Copy URL"
 --Post Patch 7.1
 DBM_CORE_NO_RANGE					= "Range Radar can not be used in instances. Legacy text range frame used instead"
 DBM_CORE_NO_ARROW					= "Arrow can not be used in instances"
-DBM_CORE_ARROW_SUMMONED				= "Arrow has been activated. If you did not do this manually, you have a 3rd party addon configured to activated it for you"
+DBM_CORE_ARROW_SUMMONED				= "DBM Arrow has been activated. If you did not do this, you have a 3rd party addon configured to activated it for you"
 DBM_CORE_NO_HUD						= "HUDMap can not be used in instances"
 
 DBM_CORE_DYNAMIC_DIFFICULTY_CLUMP	= "DBM has disabled dynamic range frame on this fight do to insufficient information about number of players needed to affect clump check for a group of your size."
@@ -55,6 +56,8 @@ DBM_CORE_TRANSCRIPTOR_LOG_START		= "Transcriptor logging started."
 DBM_CORE_TRANSCRIPTOR_LOG_END		= "Transcriptor logging ended."
 
 DBM_CORE_MOVIE_SKIPPED				= "DBM has attempted to skip a cut scene automatically."
+DBM_CORE_BONUS_SKIPPED				= "DBM has automatically closed bonus loot frame. If you need to get this frame back, type /dbmbonusroll within 3 minutes"
+DBM_CORE_BONUS_EXPIRED				= "You've attempted to use /dbmbonusroll to bring up bonus roll window but there is currently no bonus roll active."
 
 DBM_CORE_AFK_WARNING				= "You are AFK and in combat (%d percent health remaining), firing sound alert. If you are not AFK, clear your AFK flag or disable this option in 'extra features'."
 
@@ -150,7 +153,7 @@ DBM_CORE_VERSIONCHECK_FOOTER		= "Found %d player(s) with DBM & %d player(s) with
 DBM_CORE_VERSIONCHECK_OUTDATED		= "Following %d player(s) have outdated boss mod version: %s"
 DBM_CORE_YOUR_VERSION_OUTDATED      = "Your version of Deadly Boss Mods is out-of-date. Please visit http://www.deadlybossmods.com to get the latest version."
 DBM_CORE_VOICE_PACK_OUTDATED		= "Your selected DBM voice pack is missing some sounds supported by DBM. Some warning sounds will still play default sounds. Please download a newer version of voice pack or pack contact author for an update that contains missing audio"
-DBM_CORE_VOICE_MISSING				= "You had a DBM voice pack selected that could not be found. Your selection has been reset to 'None'. If this is an error, make sure your voice pack is properly installed and enabled in addons."
+DBM_CORE_VOICE_MISSING				= "You have a DBM voice pack selected that could not be found. If this is an error, make sure your voice pack is properly installed and enabled in addons."
 DBM_CORE_VOICE_DISABLED				= "You currently have at least one DBM voice pack installed but none enabled. If you intend to use a voice pack, make sure it's chosen in 'Spoken Alerts', else uninstall unused voice packs to hide this message"
 DBM_CORE_VOICE_COUNT_MISSING		= "Countdown voice %d is set to a voice/count pack that could not be found. It has be reset to default setting: %s."
 DBM_BIG_WIGS						= "BigWigs"
@@ -159,7 +162,7 @@ DBM_CORE_UPDATEREMINDER_HEADER			= "Your version of Deadly Boss Mods is out-of-d
 DBM_CORE_UPDATEREMINDER_HEADER_ALPHA	= "Your ALPHA version of Deadly Boss Mods is out-of-date.\n You are at least %d test versions behind. It is recommended that DBM users that choose ALPHA versions run the latest ALPHA. Otherwise, they should run latest RELEASE version. Out of date ALPHAs have a stricter version check because they are development versions of DBM."
 DBM_CORE_UPDATEREMINDER_FOOTER			= "Press " .. (IsMacClient() and "Cmd-C" or "Ctrl-C")  ..  " to copy the download link to your clipboard."
 DBM_CORE_UPDATEREMINDER_FOOTER_GENERIC	= "Press " .. (IsMacClient() and "Cmd-C" or "Ctrl-C")  ..  " to copy the link to your clipboard."
-DBM_CORE_UPDATEREMINDER_DISABLE			= "WARNING: Do to your Deadly Boss Mods being too out of date, it has been force disabled and cannot used until updated. This is to ensure old and incompatible code doesn't cause poor play experience for yourself or fellow raid members."
+DBM_CORE_UPDATEREMINDER_DISABLE			= "WARNING: Due to your Deadly Boss Mods being too out of date it has been force disabled and cannot be used until updated. This is to ensure old and incompatible code doesn't cause poor play experience for yourself or fellow raid members."
 DBM_CORE_UPDATEREMINDER_HOTFIX			= "DBM version you are on has known issues during this boss encounter that are corrected if you update to latest release"
 DBM_CORE_UPDATEREMINDER_HOTFIX_ALPHA	= "DBM version you are on has known issues during this boss encounter that are corrected in an upcoming release (or latest alpha version)"
 DBM_CORE_UPDATEREMINDER_MAJORPATCH		= "WARNING: Do to your Deadly Boss Mods being out of date, DBM has been disabled until updated, since this is a major game patch. This is to ensure old and incompatible code doesn't cause poor play experience for yourself or fellow group members. Make sure you download a newer version from deadlybossmods.com or curse as soon as possible."
@@ -268,6 +271,8 @@ DBM_NO_DEBUFF						= "Not %s"--For use in places like info frame where you put "
 DBM_ALLY							= "Ally"--Such as "Move to Ally"
 DBM_ADD								= "Add"--A fight Add as in "boss spawned extra adds"
 DBM_ADDS							= "Adds"
+DBM_BIG_ADD							= "Big Add"
+DBM_BOSS							= "Boss"
 DBM_CORE_ROOM_EDGE					= "Room Edge"
 DBM_CORE_FAR_AWAY					= "Far Away"
 DBM_CORE_BREAK_LOS					= "Break LOS"
@@ -355,14 +360,19 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS = {
 	taunt			= "%s on >%%s< - taunt now",
 	close			= "%s on >%%s< near you",
 	move			= "%s - move away",
+	keepmove		= "%s - keep moving",
+	stopmove		= "%s - stop moving",
 	dodge			= "%s - dodge attack",
+	dodgecount		= "%s (%%s) - dodge attack",
 	dodgeloc		= "%s - dodge from %%s",
 	moveaway		= "%s - move away from others",
+	moveawaycount	= "%s (%%s) - move away from others",
 	moveto			= "%s - move to >%%s<",
+	soak			= "%s - soak it",
 	jump			= "%s - jump",
 	run				= "%s - run away",
 	cast			= "%s - stop casting",
-	lookaway		= "%s - look away",
+	lookaway		= "%s on %%s - look away",
 	reflect			= "%s on >%%s< - stop attacking",
 	count			= "%s! (%%s)",
 	stack			= "%%d stacks of %s on you",
@@ -370,7 +380,8 @@ DBM_CORE_AUTO_SPEC_WARN_TEXTS = {
 	switchcount		= "%s - switch targets (%%s)",
 	gtfo			= "%%s under you - move away",
 	Adds			= "Incoming Adds - switch targets",
-	Addscustom		= "Incoming Adds - %%s"
+	Addscustom		= "Incoming Adds - %%s",
+	targetchange	= "Target Change - switch to %%s"
 }
 
 -- Auto-generated Special Warning Localizations
@@ -394,10 +405,15 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS = {
 	taunt 			= "Show special warning to taunt when other tank affected by $spell:%s",
 	close 			= "Show special warning when someone close to you is affected by $spell:%s",
 	move 			= "Show special warning to move out from $spell:%s",
+	keepmove 		= "Show special warning to keep moving for $spell:%s",
+	stopmove 		= "Show special warning to stop moving for $spell:%s",
 	dodge 			= "Show special warning to dodge $spell:%s",
+	dodgecount		= "Show special warning (with count) to dodge $spell:%s",
 	dodgeloc		= "Show special warning (with location) to dodge $spell:%s",
 	moveaway		= "Show special warning to move away from others for $spell:%s",
+	moveawaycount	= "Show special warning (with count) to move away from others for $spell:%s",
 	moveto			= "Show special warning to move to someone or some place for $spell:%s",
+	soak			= "Show special warning to soak for $spell:%s",
 	jump			= "Show special warning to move to jump for $spell:%s",
 	run 			= "Show special warning to run away from $spell:%s",
 	cast 			= "Show special warning to stop casting for $spell:%s",--Spell Interrupt
@@ -407,15 +423,17 @@ DBM_CORE_AUTO_SPEC_WARN_OPTIONS = {
 	stack 			= "Show special warning when you are affected by >=%d stacks of $spell:%s",
 	switch			= "Show special warning to switch targets for $spell:%s",
 	switchcount		= "Show special warning (with count) to switch targets for $spell:%s",
-	gtfo 			= "Show special warning to move out bad stuff on ground",
+	gtfo 			= "Show special warning to move out of bad stuff on ground",
 	Adds			= "Show special warning to switch targets for incoming adds",
-	Addscustom		= "Show special warning for incoming adds"
+	Addscustom		= "Show special warning for incoming adds",
+	targetchange	= "Show special warning for priority target changes"
 }
 
 -- Auto-generated Timer Localizations
 DBM_CORE_AUTO_TIMER_TEXTS = {
 	target		= "%s: %%s",
 	cast		= "%s",
+	castcount	= "%s (%%s)",
 	castsource	= "%s: %%s",
 	active		= "%s ends",--Buff/Debuff/event on boss
 	fades		= "%s fades",--Buff/Debuff on players
@@ -438,6 +456,7 @@ DBM_CORE_AUTO_TIMER_TEXTS = {
 DBM_CORE_AUTO_TIMER_OPTIONS = {
 	target		= "Show timer for $spell:%s debuff",
 	cast		= "Show timer for $spell:%s cast",
+	castcount	= "Show timer (with count) for $spell:%s cast",
 	castsource	= "Show timer (with source) for $spell:%s cast",
 	active		= "Show timer for $spell:%s duration",
 	fades		= "Show timer for when $spell:%s fades from players",

@@ -1,21 +1,23 @@
 
 MEETINGSTONE_UI_DB = {
 	["profileKeys"] = {
+		["扎丝特思 - 燃烧之刃"] = "Default",
+		["币开头小德 - 燃烧之刃"] = "Default",
+		["Dhuntress - 燃烧之刃"] = "Default",
+		["牛奶酒 - 白银之手"] = "Default",
+		["牛奶酒 - 燃烧之刃"] = "Default",
+		["迪达克范特西 - 燃烧之刃"] = "Default",
 		["秦断雨 - 白银之手"] = "Default",
 		["萨德德萨 - 白银之手"] = "Default",
-		["地开头武僧 - 古尔丹"] = "Default",
 		["狼人萨 - 白银之手"] = "Default",
 		["亡者铜板 - 鬼雾峰"] = "Default",
-		["币开头小德 - 燃烧之刃"] = "Default",
 		["洛克坦丶欧嘎 - 燃烧之刃"] = "Default",
-		["Dhuntress - 燃烧之刃"] = "Default",
 		["地经萨 - 燃烧之刃"] = "Default",
-		["扎丝特思 - 燃烧之刃"] = "Default",
-		["牛奶酒 - 燃烧之刃"] = "Default",
-		["牛奶酒 - 白银之手"] = "Default",
+		["李书炆 - 燃烧之刃"] = "Default",
+		["地开头武僧 - 古尔丹"] = "Default",
 		["地经萨 - 古尔丹"] = "Default",
 		["弗瑞德姆 - 燃烧之刃"] = "Default",
-		["迪达克范特西 - 燃烧之刃"] = "Default",
+		["看看我就 - 燃烧之刃"] = "Default",
 	},
 	["global"] = {
 		["serverDatas"] = {
@@ -31,7 +33,7 @@ MEETINGSTONE_UI_DB = {
 				["data"] = "^1^SMallData^T^S宠物#1^S2006;1500,,每周限量;23713;16943#2007;850,,每周限量;72134;38919^S消耗品#3^S1002;150;46779^S玩具#2^S7001;750,,每周限量;54212;31756#3006;1500,,每月限量;79769#3007;450,,每月限量;69227^t^^",
 			},
 			["ActivitiesData"] = {
-				["data"] = "$1$Z$S198`魔兽主播活动`争霸钥石地下城(部落）`12月1日（周六）20点，争霸钥石地下城(部落）*J是去净化赞达拉腐化的源头，还是与来自科赞的地精抢夺资源，亦或是亲临蛇人的圣地来一次神庙大逃亡，只要加入斗鱼TV：炎凉大宝宝（房间号：128314）的队伍，你就一定会拥有一个难忘的夜晚，挑战者的宝箱只属于真正的部落勇士。*J魔兽主播活动QQ交流群：603459231`http://w.163.com/special/convene-stone/`1`3$$",
+				["data"] = "$1$Z$S199`魔兽主播活动`战痕英雄的荣耀-上（部落）`12月8日（周六）20点，战痕英雄的荣耀-上（部落）*J严苛的荒漠环境造就了黑曜三叶虫不屈的脾性，只有真正的部落勇士才能驯服它，追随斗鱼TV：棒老三（房间号：301049）一起在争霸艾泽拉斯史诗五人地下城中翻江倒海，夺取战痕英雄的荣耀！*J魔兽主播活动QQ交流群：603459231`http://w.163.com/special/convene-stone/`1`3$$",
 			},
 		},
 		["spamWord"] = {
@@ -115,17 +117,17 @@ MEETINGSTONE_UI_DB = {
 					["enable"] = false,
 					["max"] = 0,
 				},
-				["Age"] = {
-					["min"] = 0,
-					["enable"] = false,
-					["max"] = 0,
-				},
 				["Members"] = {
 					["min"] = 0,
 					["enable"] = false,
 					["max"] = 0,
 				},
 				["ItemLevel"] = {
+					["min"] = 0,
+					["enable"] = false,
+					["max"] = 0,
+				},
+				["Age"] = {
 					["min"] = 0,
 					["enable"] = false,
 					["max"] = 0,
@@ -137,17 +139,17 @@ MEETINGSTONE_UI_DB = {
 					["max"] = 0,
 					["enable"] = false,
 				},
-				["Age"] = {
-					["min"] = 0,
-					["max"] = 0,
-					["enable"] = false,
-				},
 				["Members"] = {
 					["min"] = 0,
 					["max"] = 0,
 					["enable"] = false,
 				},
 				["ItemLevel"] = {
+					["min"] = 0,
+					["max"] = 0,
+					["enable"] = false,
+				},
+				["Age"] = {
 					["min"] = 0,
 					["max"] = 0,
 					["enable"] = false,

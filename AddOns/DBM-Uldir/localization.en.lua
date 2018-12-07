@@ -19,10 +19,32 @@ L= DBM:GetModLocalization(2167)
 ---------------------------
 L= DBM:GetModLocalization(2146)
 
+L:SetWarningLocalization({
+	addsSoon		= "Chute has opened - Adds Soon"
+})
+
+L:SetTimerLocalization({
+	chuteTimer		= "Next Chute (%s)"
+})
+
+L:SetOptionLocalization({
+	addsSoon		= "Show pre warning for when chutes open and start spawning adds",
+	chuteTimer		= "Show timer for when Chutes open"
+})
+
 ---------------------------
 -- Zek'vhozj --
 ---------------------------
 L= DBM:GetModLocalization(2169)
+
+L:SetTimerLocalization({
+	timerOrbLands	= "Orb (%s) Lands"
+})
+
+L:SetOptionLocalization({
+	timerOrbLands	 =	"Show timer for when Orb of Corruption Lands",
+	EarlyTankSwap	 =	"Show tank swap warning immediately after Shatter, instead of waiting for 2nd Void Lash"
+})
 
 L:SetMiscLocalization({
 	CThunDisc	 =	"Disc accessed. C'thun data loading.",
@@ -36,7 +58,13 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2166)
 
 L:SetOptionLocalization({
-	ShowHighestFirst	 =	"Sort Lingering Infection Infoframe by highest debuff stack (instead of lowest)"
+	ShowHighestFirst2	 =	"Sort Lingering Infection Infoframe by highest debuff stack (instead of lowest). Only applies if not set to party only.",
+	ShowOnlyParty		 =	"Show Lingering Infection only for your party. This option always sorts the frame by party order.",
+	SetIconsRegardless	 =	"Set icons regardless of whether or not a BW user has assist (Advanced)"
+})
+
+L:SetMiscLocalization({
+	BWIconMsg			 =	"DBM's has passed icon marking to a promoted BW user in raid to avoid icon conflicts. Make sure they have marking enabled, or demote them to enable DBM marking, or enable the override option in Vectis options"
 })
 
 ---------------

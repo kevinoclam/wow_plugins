@@ -1,7 +1,0 @@
-_Cursor: disabled
-Recount: enabled
-TellMeWhen: disabled
-TellMeWhen_Options: disabled
-WeakAurasModelPaths: disabled
-WeakAuras: disabled
-Skada: disabled

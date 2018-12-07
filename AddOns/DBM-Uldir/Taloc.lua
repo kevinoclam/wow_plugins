@@ -1,14 +1,14 @@
 local mod	= DBM:NewMod(2168, "DBM-Uldir", nil, 1031)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 17826 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 18106 $"):sub(12, -3))
 mod:SetCreatureID(137119)--Taloc
 mod:SetEncounterID(2144)
 mod:SetZone()
 --mod:SetUsedIcons(1, 2, 3)
 --mod:SetHotfixNoticeRev(16950)
 --mod:SetMinSyncRevision(16950)
---mod.respawnTime = 35
+mod.respawnTime = 29
 
 mod:RegisterCombat("combat")
 
@@ -49,12 +49,12 @@ local yellEnlargedHeart					= mod:NewYell(275205)
 local yellEnlargedHeartFades			= mod:NewFadesYell(275205)
 local specWarnEnlargedHeartTaunt		= mod:NewSpecialWarningTaunt(275205, "Tank", nil, nil, 1, 2)
 local specWarnEnlargedHeartOther		= mod:NewSpecialWarningMoveTo(275205, "-Tank", nil, nil, 1, 2)
-local specWarnGTFO						= mod:NewSpecialWarningGTFO(270290, nil, nil, nil, 1, 2)
+local specWarnGTFO						= mod:NewSpecialWarningGTFO(270290, nil, nil, nil, 1, 8)
 
 mod:AddTimerLine(BOSS)
 local timerPlasmaDischargeCD			= mod:NewCDCountTimer(30.4, 271225, nil, nil, nil, 3)--30.4-42
 local timerCudgelOfGoreCD				= mod:NewCDCountTimer(58.4, 271296, nil, nil, nil, 5, nil, DBM_CORE_TANK_ICON)--60.4-63
-local timerSanguineStaticCD				= mod:NewCDTimer(55, 272582, nil, nil, nil, 3)--60.4-63
+local timerSanguineStaticCD				= mod:NewCDTimer(53.6, 272582, nil, nil, nil, 3)--60.4-63
 local timerEnlargedHeartCD				= mod:NewCDCountTimer(60.4, 275205, nil, nil, nil, 3, nil, DBM_CORE_TANK_ICON)--60.4-63 (also timer for hardened, go out at same time, no need for two)
 mod:AddTimerLine(DBM:GetSpellInfo(271965))
 local timerPoweredDown					= mod:NewBuffActiveTimer(88.6, 271965, nil, nil, nil, 6)
@@ -156,7 +156,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 			if self.vb.plasmaCast == 1 then
 				timerPlasmaDischargeCD:Start(40, self.vb.plasmaCast+1)
 			elseif self.vb.plasmaCast == 2 then
-				timerPlasmaDischargeCD:Start(35, self.vb.plasmaCast+1)
+				timerPlasmaDischargeCD:Start(32.8, self.vb.plasmaCast+1)
 			else
 				timerPlasmaDischargeCD:Start(30, self.vb.plasmaCast+1)
 			end
@@ -179,7 +179,9 @@ function mod:SPELL_AURA_APPLIED(args)
 			yellPlasmaDischarge:Yell()
 		end
 	elseif spellId == 271965 then
-		ignoreGTFO = false
+		if self:IsTank() then
+			ignoreGTFO = true
+		end
 		warnPoweringDown:Show()
 		warnPoweringDown:Play("phasechange")
 		timerPoweredDown:Start()
@@ -235,6 +237,7 @@ function mod:SPELL_AURA_REMOVED(args)
 	if spellId == 271225 then--Used later with icon feature
 
 	elseif spellId == 271965 then
+		ignoreGTFO = false
 		self.vb.plasmaCast = 0
 		self.vb.cudgelCount = 0
 		self.vb.enlargedCount = 0
@@ -268,7 +271,7 @@ end
 function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId, spellName)
 	if spellId == 270290 and destGUID == UnitGUID("player") and self:AntiSpam(2, 2) and not ignoreGTFO then
 		specWarnGTFO:Show(spellName)
-		specWarnGTFO:Play("runaway")
+		specWarnGTFO:Play("watchfeet")
 	end
 end
 mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE

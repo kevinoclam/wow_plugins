@@ -1,7 +1,7 @@
 local mod	= DBM:NewMod(2195, "DBM-Uldir", nil, 1031)
 local L		= mod:GetLocalizedStrings()
 
-mod:SetRevision(("$Revision: 17793 $"):sub(12, -3))
+mod:SetRevision(("$Revision: 18028 $"):sub(12, -3))
 mod:SetCreatureID(138967)
 mod:SetEncounterID(2145)
 mod:DisableESCombatDetection()--ES fires moment you throw out CC, so it can't be trusted for combatstart
@@ -10,25 +10,21 @@ mod:SetZone()
 mod:SetUsedIcons(1, 2, 8)
 mod:SetHotfixNoticeRev(17775)
 --mod:SetMinSyncRevision(16950)
---mod.respawnTime = 35
+mod.respawnTime = 32
 
 mod:RegisterCombat("combat")
 
 mod:RegisterEventsInCombat(
 	"SPELL_CAST_START 273316 273451 273350",
 	"SPELL_CAST_SUCCESS 273365 271640 274358 274168 273889 274098 274119",
-	"SPELL_AURA_APPLIED 273365 271640 273434 276093 273288 274358 274271 273432 276434",
+	"SPELL_AURA_APPLIED 273365 271640 273434 276093 273288 274358 274271 273432 276434 274195",
 	"SPELL_AURA_APPLIED_DOSE 274358",
-	"SPELL_AURA_REMOVED 273365 271640 276093 273288 274358 274271 273432 276434",
---	"SPELL_PERIODIC_DAMAGE",
---	"SPELL_PERIODIC_MISSED",
+	"SPELL_AURA_REMOVED 273365 271640 276093 273288 274358 274271 273432 276434 274195",
 	"UNIT_DIED",
---	"CHAT_MSG_RAID_BOSS_EMOTE",
 	"UNIT_SPELLCAST_SUCCEEDED boss1"
 )
 
 --TODO, check Locus of Corruption trigger for bugs after adding unneeded antispam to fix an impossible bug
---TODO, stack count assumed for tank swaps?
 --TODO, minion of zul fixate detection?
 --TODO, maybe switch warning for minions of zul, or detectable spawns, show on a custom infoframe number of adds up (each type)
 --[[
@@ -46,6 +42,7 @@ local warnDarkRevCount					= mod:NewCountAnnounce(273365, 3)
 --Stage Two: Zul, Awakened
 local warnPhase2						= mod:NewPhaseAnnounce(2, 2, nil, nil, nil, nil, nil, 2)
 local warnRupturingBlood				= mod:NewStackAnnounce(274358, 2, nil, "Tank")
+local warnDeathwish						= mod:NewCountAnnounce(274271, 3)
 
 --Stage One: The Forces of Blood
 local specWarnDarkRevolation			= mod:NewSpecialWarningYouPos(273365, nil, nil, nil, 1, 2)
@@ -63,7 +60,7 @@ local specWarnMinionofZul				= mod:NewSpecialWarningSwitch("ej18530", "MagicDisp
 ----Forces of Blood
 local specWarnCongealBlood				= mod:NewSpecialWarningSwitch(273451, "Dps", nil, nil, 3, 2)
 local specWarnBloodshard				= mod:NewSpecialWarningInterrupt(273350, false, nil, 4, 1, 2)--Spam cast, so opt in, not opt out
---local specWarnGTFO					= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 2)
+--local specWarnGTFO					= mod:NewSpecialWarningGTFO(238028, nil, nil, nil, 1, 8)
 --Stage Two: Zul, Awakened
 local specWarnRupturingBlood			= mod:NewSpecialWarningStack(274358, nil, 3, nil, nil, 1, 6)
 local specWarnRupturingBloodTaunt		= mod:NewSpecialWarningTaunt(274358, nil, nil, nil, 1, 2)
@@ -85,7 +82,7 @@ local timerBloodyCleaveCD				= mod:NewCDTimer(14.1, 273316, nil, "Tank", nil, 5,
 local timerCongealBloodCD				= mod:NewCDTimer(22.7, 273451, nil, "Dps", nil, 5, nil, DBM_CORE_DAMAGE_ICON)
 mod:AddTimerLine(DBM:EJ_GetSectionInfo(18550))
 local timerRupturingBloodCD				= mod:NewCDTimer(6.1, 274358, nil, "Tank", nil, 5, nil, DBM_CORE_TANK_ICON)
-local timerDeathwishCD					= mod:NewNextTimer(27.9, 274271, nil, nil, nil, 3, nil, DBM_CORE_DEADLY_ICON..DBM_CORE_MAGIC_ICON)
+local timerDeathwishCD					= mod:NewNextCountTimer(27.9, 274271, nil, nil, nil, 3, nil, DBM_CORE_DEADLY_ICON..DBM_CORE_MAGIC_ICON)
 
 
 --local berserkTimer					= mod:NewBerserkTimer(600)
@@ -96,11 +93,11 @@ local timerDeathwishCD					= mod:NewNextTimer(27.9, 274271, nil, nil, nil, 3, ni
 
 --mod:AddSetIconOption("SetIconGift", 255594, true)
 --mod:AddRangeFrameOption("8/10")
-mod:AddInfoFrameOption(258040, true)
+mod:AddInfoFrameOption(274195, true)
 mod:AddNamePlateOption("NPAuraOnPresence", 276093)
 mod:AddNamePlateOption("NPAuraOnThrumming", 273288)
 mod:AddNamePlateOption("NPAuraOnBoundbyShadow", 273432)
-mod:AddNamePlateOption("NPAuraOnEngorgedBurst", 276299)
+mod:AddNamePlateOption("NPAuraOnEngorgedBurst2", 276299, false)
 mod:AddNamePlateOption("NPAuraOnDecayingFlesh", 276434)
 mod:AddSetIconOption("SetIconOnDecay", 276434, true, true)
 mod:AddSetIconOption("SetIconDarkRev", 273365, true)
@@ -114,13 +111,19 @@ mod.vb.CrawgsActive = 0
 mod.vb.HexerSpawnCount = 0
 mod.vb.CrusherSpawnCount = 0
 mod.vb.DarkRevIcon = 1
+mod.vb.deathwishCount = 0
 mod.vb.activeDecay = nil
 local unitTracked = {}
+local corruptedBloodTarget = {}
 
 local updateInfoFrame
 do
+	local floor, tsort = math.floor, table.sort
 	local lines = {}
+	local tempLines = {}
+	local tempLinesSorted = {}
 	local sortedLines = {}
+	local function sortFuncDesc(a, b) return tempLines[a] > tempLines[b] end
 	local function addLine(key, value)
 		-- sort by insertion order
 		lines[key] = value
@@ -128,6 +131,8 @@ do
 	end
 	updateInfoFrame = function()
 		table.wipe(lines)
+		table.wipe(tempLines)
+		table.wipe(tempLinesSorted)
 		table.wipe(sortedLines)
 		--Boss Powers first
 		for i = 1, 5 do
@@ -135,27 +140,38 @@ do
 			--Primary Power
 			local currentPower, maxPower = UnitPower(uId), UnitPowerMax(uId)
 			if maxPower and maxPower ~= 0 then
-				if currentPower / maxPower * 100 >= 1 then
+				local adjustedPower = currentPower / maxPower * 100
+				if adjustedPower >= 1 and adjustedPower ~= 100 then--Filter 100 power, to basically eliminate cced Adds
 					addLine(UnitName(uId), currentPower)
 				end
 			end
 		end
-		--Player personal checks
-		local spellName3, _, _, _, _, expireTime = DBM:UnitDebuff("player", 276672)
-		if spellName3 and expireTime then--Personal Unleashed Shadow
-			local remaining = expireTime-GetTime()
-			addLine(spellName3, remaining)
-		end
-		local spellName4, _, currentStack = DBM:UnitDebuff("player", 274195)
-		if spellName4 and currentStack then--Personal Corrupted Blood
-			addLine(spellName4, currentStack)
+		if mod:IsMythic() then
+			addLine(" ", " ")--Insert a blank entry to split the two debuffs
+			--Corrupted Blood Stacks (UGLY code)
+			for i=1, #corruptedBloodTarget do
+				local name = corruptedBloodTarget[i]
+				local uId = DBM:GetRaidUnitId(name)
+				local spellName, _, count = DBM:UnitDebuff(uId, 274195)
+				if spellName and count then
+					local unitName = UnitName(uId)
+					tempLines[unitName] = count
+					tempLinesSorted[#tempLinesSorted + 1] = unitName
+				end
+			end
+			--Sort debuffs by highest then inject into regular table
+			tsort(tempLinesSorted, sortFuncDesc)
+			for _, name in ipairs(tempLinesSorted) do
+				addLine(name, tempLines[name])
+			end
 		end
 		return lines, sortedLines
 	end
 end
 
+
 function mod:OnCombatStart(delay)
-	DBM:AddMsg("There is no Dana, only Zul")
+	table.wipe(corruptedBloodTarget)
 	self.vb.phase = 1
 	self.vb.poolCount = 0
 	self.vb.darkRevCount = 0
@@ -164,14 +180,15 @@ function mod:OnCombatStart(delay)
 	self.vb.HexerSpawnCount = 0
 	self.vb.CrusherSpawnCount = 0
 	self.vb.DarkRevIcon = 1
+	self.vb.deathwishCount = 0
 	self.vb.activeDecay = nil
 	timerPoolofDarknessCD:Start(20.5-delay, 1)
 	timerDarkRevolationCD:Start(30-delay, 1)
 	timerCallofCrawgCD:Start(34.9, 1)--35-45
-	timerCallofHexerCD:Start(50.7, 1)--50.7-54
+	timerCallofHexerCD:Start(50.5, 1)--50.5-54
 	timerCallofCrusherCD:Start(70, 1)--70-73
 	if self.Options.InfoFrame then
-		--DBM.InfoFrame:SetHeader(DBM_CORE_INFOFRAME_POWER)
+		DBM.InfoFrame:SetHeader(DBM_CORE_INFOFRAME_POWER)
 		DBM.InfoFrame:Show(8, "function", updateInfoFrame, false, false)
 	end
 	table.wipe(unitTracked)
@@ -180,9 +197,9 @@ function mod:OnCombatStart(delay)
 			"UNIT_TARGET_UNFILTERED"
 		)
 	end
-	if self.Options.NPAuraOnPresence or self.Options.NPAuraOnThrumming or self.Options.NPAuraOnBoundbyShadow or self.Options.NPAuraOnEngorgedBurst or self.Options.NPAuraOnDecayingFlesh then
+	if self.Options.NPAuraOnPresence or self.Options.NPAuraOnThrumming or self.Options.NPAuraOnBoundbyShadow or self.Options.NPAuraOnEngorgedBurst2 or self.Options.NPAuraOnDecayingFlesh then
 		DBM:FireEvent("BossMod_EnableHostileNameplates")
-		if self.Options.NPAuraOnEngorgedBurst then
+		if self.Options.NPAuraOnEngorgedBurst2 then
 			self:RegisterOnUpdateHandler(function(self)
 				for i = 1, 40 do
 					local UnitID = "nameplate"..i
@@ -230,7 +247,7 @@ function mod:OnCombatEnd()
 	if self.Options.InfoFrame then
 		DBM.InfoFrame:Hide()
 	end
-	if self.Options.NPAuraOnPresence or self.Options.NPAuraOnThrumming or self.Options.NPAuraOnBoundbyShadow or self.Options.NPAuraOnEngorgedBurst or self.Options.NPAuraOnDecayingFlesh then
+	if self.Options.NPAuraOnPresence or self.Options.NPAuraOnThrumming or self.Options.NPAuraOnBoundbyShadow or self.Options.NPAuraOnEngorgedBurst2 or self.Options.NPAuraOnDecayingFlesh then
 		DBM.Nameplate:Hide(true, nil, nil, nil, true, true)
 	end
 end
@@ -264,7 +281,7 @@ function mod:SPELL_CAST_SUCCESS(args)
 		timerCallofCrusherCD:Stop()
 		timerRupturingBloodCD:Start(6.5)
 		timerPoolofDarknessCD:Start(15, self.vb.poolCount+1)--Still used in P2
-		timerDeathwishCD:Start(23)
+		timerDeathwishCD:Start(23, 1)
 	elseif spellId == 273365 or spellId == 271640 then--Two versions of debuff, one that spawns an add and one that does not (so probably LFR/normal version vs heroic/mythic version)
 		self.vb.darkRevCount = self.vb.darkRevCount + 1
 		warnDarkRevCount:Show(self.vb.darkRevCount)
@@ -275,10 +292,14 @@ function mod:SPELL_CAST_SUCCESS(args)
 		specWarnCallofCrawgSoon:Play("mobsoon")
 		specWarnCallofCrawg:Schedule(12, self.vb.CrawgSpawnCount)
 		specWarnCallofCrawg:ScheduleVoice(12, "killmob")
-		timerCallofCrawgCD:Start(40.6, self.vb.CrawgSpawnCount+1)
+		if self:IsMythic() then
+			timerCallofCrawgCD:Start(45.6, self.vb.CrawgSpawnCount+1)
+		else
+			timerCallofCrawgCD:Start(40.6, self.vb.CrawgSpawnCount+1)
+		end
 		timerAddIncoming:Start(12, L.Crawg)
 		self.vb.CrawgsActive = self.vb.CrawgsActive + 4--4 in all difficulties?
-		if self.Options.NPAuraOnEngorgedBurst and self.vb.CrawgsActive <= 4 then--This should only happen if previous count was 0, so re-enable scanner
+		if self.Options.NPAuraOnEngorgedBurst2 and self.vb.CrawgsActive <= 4 then--This should only happen if previous count was 0, so re-enable scanner
 			self:RegisterOnUpdateHandler(function(self)
 				for i = 1, 40 do
 					local UnitID = "nameplate"..i
@@ -400,7 +421,7 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 	elseif spellId == 273288 then--Thrumming Pulse
 		if self.Options.NPAuraOnThrumming then
-			DBM.Nameplate:Show(true, args.destGUID, spellId)
+			DBM.Nameplate:Show(true, args.destGUID, spellId, nil, 40)
 		end
 	elseif spellId == 273432 then--Bound by Shadow
 		if self.Options.NPAuraOnBoundbyShadow then
@@ -408,9 +429,12 @@ function mod:SPELL_AURA_APPLIED(args)
 		end
 	elseif spellId == 276434 then--Decaying Flesh
 		self.vb.activeDecay = args.destGUID
-		warnActiveDecay:Show(args.destName)
+		local cid = self:GetCIDFromGUID(args.destGUID)
+		if cid ~= 139059 then--Minimize spam by just not announcing when it's on Crawgs
+			warnActiveDecay:Show(args.destName)
+		end
 		if self.Options.NPAuraOnDecayingFlesh then
-			DBM.Nameplate:Show(true, args.destGUID, spellId)
+			DBM.Nameplate:Show(true, args.destGUID, spellId, nil, 12)
 		end
 	elseif spellId == 274271 then
 		if args:IsPlayer() then
@@ -421,6 +445,10 @@ function mod:SPELL_AURA_APPLIED(args)
 			specWarnDeathwishNear:CombinedShow(0.3, args.destName)
 			specWarnDeathwishNear:CancelVoice()--Avoid spam
 			specWarnDeathwishNear:ScheduleVoice(0.3, "runaway")
+		end
+	elseif spellId == 274195 then
+		if not tContains(corruptedBloodTarget, args.destName) then
+			table.insert(corruptedBloodTarget, args.destName)
 		end
 	end
 end
@@ -458,6 +486,8 @@ function mod:SPELL_AURA_REMOVED(args)
 			specWarnRupturingBloodEdge:Cancel()
 			specWarnRupturingBloodEdge:CancelVoice()
 		end
+	elseif spellId == 274195 then
+		tDeleteItem(corruptedBloodTarget, args.destName)
 	end
 end
 
@@ -465,7 +495,7 @@ end
 function mod:SPELL_PERIODIC_DAMAGE(_, _, _, _, destGUID, _, _, _, spellId)
 	if spellId == 228007 and destGUID == UnitGUID("player") and self:AntiSpam(2, 4) then
 		specWarnGTFO:Show()
-		specWarnGTFO:Play("runaway")
+		specWarnGTFO:Play("watchfeet")
 	end
 end
 mod.SPELL_PERIODIC_MISSED = mod.SPELL_PERIODIC_DAMAGE
@@ -514,30 +544,11 @@ do
 	end
 end
 
---At some point during testing, blizzard hotfixed out the CLEU event for pool of darkness, this is the backup (1 second slower than old CLEU event)
---CLEU event is still coded into mod for good measure in case it returns but not holding breath
---[[
-function mod:CHAT_MSG_RAID_BOSS_EMOTE(msg)
-	if msg:find("spell:273361") and self:AntiSpam(5, 5) then
-		self.vb.poolCount = self.vb.poolCount + 1
-		if self.Options.SpecWarn273361count then
-			specWarnPoolofDarkness:Show(self.vb.poolCount)
-			specWarnPoolofDarkness:Play("helpsoak")
-		else
-			warnPoolofDarkness:Show(self.vb.poolCount)
-		end
-		if self.vb.phase == 2 then
-			timerPoolofDarknessCD:Start(15.5, self.vb.poolCount+1)
-		else
-			timerPoolofDarknessCD:Start(30.5, self.vb.poolCount+1)
-		end
-	end
-end
---]]
-
 function mod:UNIT_SPELLCAST_SUCCEEDED(uId, _, spellId)
 	if spellId == 274315 then--Deathwish
-		timerDeathwishCD:Start()
+		self.vb.deathwishCount = self.vb.deathwishCount + 1
+		warnDeathwish:Show(self.vb.deathwishCount)
+		timerDeathwishCD:Start(nil, self.vb.deathwishCount+1)
 	elseif spellId == 273361 then--Pool of Darkness
 		self.vb.poolCount = self.vb.poolCount + 1
 		if self.Options.SpecWarn273361count then
