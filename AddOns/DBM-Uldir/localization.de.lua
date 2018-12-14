@@ -1,4 +1,4 @@
-﻿if GetLocale() ~= "deDE" then return end
+if GetLocale() ~= "deDE" then return end
 local L
 
 ---------------------------
@@ -45,7 +45,7 @@ L:SetMiscLocalization({
 L= DBM:GetModLocalization(2166)
 
 L:SetOptionLocalization({
-	ShowHighestFirst2	 =	"Sortiere Infofenster nach dem höchsten Stapel von \"Anhaltende Infektion\" (statt dem niedrigsten Stapel)",
+	ShowHighestFirst3	 =	"Sortiere Infofenster nach dem höchsten Stapel von \"Anhaltende Infektion\" (statt dem niedrigsten Stapel)",
 	ShowOnlyParty		 =	"Zeige Anhaltende Infektion nur für deine Gruppe"
 })
 

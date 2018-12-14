@@ -2,7 +2,7 @@ local tinsert, tconcat, tremove, wipe = table.insert, table.concat, table.remove
 local select, pairs, next, type, unpack = select, pairs, next, type, unpack
 local tostring, error = tostring, error
 
-local Type, Version = "WeakAurasDisplayButton", 39
+local Type, Version = "WeakAurasDisplayButton", 41
 local AceGUI = LibStub and LibStub("AceGUI-3.0", true)
 if not AceGUI or (AceGUI:GetWidgetVersion(Type) or 0) >= Version then return end
 
@@ -24,6 +24,8 @@ local ignoreForCopyingDisplay = {
   parent = true,
   controlledChildren = true,
   uid = true,
+  authorOptions = true,
+  config = true,
 }
 
 local function copyAuraPart(source, destination, part)
@@ -163,6 +165,24 @@ clipboard.copyAnimationsEntry = {
   end
 };
 
+clipboard.copyAuthorOptionsEntry = {
+  text = WeakAuras.newFeatureString .. L["Author Options"],
+  notCheckable = true,
+  func = function()
+    WeakAuras_DropDownMenu:Hide();
+    CopyToClipboard("authorOptions", L["Paste Author Options Settings"])
+  end
+};
+
+clipboard.copyUserConfigEntry = {
+  text = WeakAuras.newFeatureString .. L["Custom Configuration"],
+  notCheckable = true,
+  func = function()
+    WeakAuras_DropDownMenu:Hide();
+    CopyToClipboard("config", L["Paste Custom Configuration"])
+  end
+};
+
 local function UpdateClipboardMenuEntry(data)
   clipboard.current = data;
 
@@ -181,6 +201,8 @@ local function UpdateClipboardMenuEntry(data)
     clipboard.copyLoadEntry.text = nil;
     clipboard.copyActionsEntry.text = nil;
     clipboard.copyAnimationsEntry.text = nil;
+    clipboard.copyAuthorOptionsEntry = nil;
+    clipboard.copyUserConfigEntry = nil;
     clipboard.copyGroupEntry.text = L["Group"];
   else
     clipboard.copyEverythingEntry.text = L["Everything"];
@@ -190,6 +212,8 @@ local function UpdateClipboardMenuEntry(data)
     clipboard.copyLoadEntry.text = L["Load"];
     clipboard.copyActionsEntry.text = L["Actions"];
     clipboard.copyAnimationsEntry.text = L["Animations"];
+    clipboard.copyAuthorOptionsEntry = WeakAuras.newFeatureString .. L["Author Options"];
+    clipboard.copyUserConfigEntry = WeakAuras.newFeatureString .. L["Custom Configuration"];
     clipboard.copyGroupEntry.text = nil;
   end
 end
@@ -477,6 +501,9 @@ local methods = {
             fullName = name.."-"..realm
           end
           editbox:Insert("[WeakAuras: "..fullName.." - "..data.id.."]");
+        elseif not data.controlledChildren then
+          -- select all buttons between 1st select and current
+          WeakAuras.PickDisplayMultipleShift(data.id)
         end
       else
         if(mouseButton == "RightButton") then
@@ -511,18 +538,33 @@ local methods = {
 
     function self.callbacks.OnClickGrouping()
       if (WeakAuras.IsImporting()) then return end;
-      tinsert(data.controlledChildren, self.grouping.id);
-      local childButton = WeakAuras.GetDisplayButton(self.grouping.id);
-      childButton:SetGroup(data.id, data.regionType == "dynamicgroup");
-      childButton:SetGroupOrder(#data.controlledChildren, #data.controlledChildren);
-      self.callbacks.UpdateExpandButton();
-      self.grouping.parent = data.id;
+      if #self.grouping > 0 then
+        for index, childId in ipairs(self.grouping) do
+          tinsert(data.controlledChildren, childId);
+          local childButton = WeakAuras.GetDisplayButton(childId);
+          local childData = WeakAuras.GetData(childId);
+          if childData.parent then
+            childButton:Ungroup();
+          end
+          childButton:SetGroup(data.id, data.regionType == "dynamicgroup");
+          childButton:SetGroupOrder(#data.controlledChildren, #data.controlledChildren);
+          childData.parent = data.id;
+          WeakAuras.Add(childData);
+        end
+      else
+        tinsert(data.controlledChildren, self.grouping.id);
+        local childButton = WeakAuras.GetDisplayButton(self.grouping.id);
+        childButton:SetGroup(data.id, data.regionType == "dynamicgroup");
+        childButton:SetGroupOrder(#data.controlledChildren, #data.controlledChildren);
+        self.grouping.parent = data.id;
+        WeakAuras.Add(self.grouping);
+      end
       if (data.regionType == "dynamicgroup") then
         self.grouping.xOffset = 0;
         self.grouping.yOffset = 0;
       end
       WeakAuras.Add(data);
-      WeakAuras.Add(self.grouping);
+      self.callbacks.UpdateExpandButton();
       WeakAuras.SetGrouping();
       WeakAuras.UpdateDisplayButton(data);
       WeakAuras.ReloadGroupRegionOptions(data);
@@ -538,7 +580,6 @@ local methods = {
     end
 
     function self.callbacks.OnGroupClick()
-      WeakAuras.PickDisplay(data.id);
       WeakAuras.SetGrouping(data);
     end
 
@@ -576,28 +617,7 @@ local methods = {
     end
 
     function self.callbacks.OnUngroupClick()
-      if (WeakAuras.IsImporting()) then return end;
-      local parentData = WeakAuras.GetData(data.parent);
-      local index;
-      for childIndex, childId in pairs(parentData.controlledChildren) do
-        if(childId == data.id) then
-          index = childIndex;
-          break;
-        end
-      end
-      if(index) then
-        tremove(parentData.controlledChildren, index);
-        WeakAuras.Add(parentData);
-        WeakAuras.ReloadGroupRegionOptions(parentData);
-      else
-        error("Display thinks it is a member of a group which does not control it");
-      end
-      self:SetGroup();
-      data.parent = nil;
-      WeakAuras.Add(data);
-      WeakAuras.UpdateGroupOrders(parentData);
-      WeakAuras.UpdateDisplayButton(parentData);
-      WeakAuras.SortDisplayButtons();
+      WeakAuras.Ungroup(data);
     end
 
     function self.callbacks.OnUpGroupClick()
@@ -724,17 +744,24 @@ local methods = {
       end
     end
 
+    function self.callbacks.OnUpdateClick()
+      local wago = WeakAurasCompanion[self.update.slug]
+      if wago then
+        WeakAuras.ImportString(wago.encoded)
+      end
+    end
+
     function self.callbacks.OnRenameAction(newid)
       if (WeakAuras.IsImporting()) then return end;
       local oldid = data.id;
       if not(newid == oldid) then
-        local temp;
 
         WeakAuras.Rename(data, newid);
 
         WeakAuras.thumbnails[newid] = WeakAuras.thumbnails[oldid];
         WeakAuras.thumbnails[oldid] = nil;
         WeakAuras.displayButtons[newid] = WeakAuras.displayButtons[oldid];
+        WeakAuras.displayButtons[newid]:SetData(data)
         WeakAuras.displayButtons[oldid] = nil;
         WeakAuras.displayOptions[oldid] = nil;
         WeakAuras.AddOption(newid, data);
@@ -772,6 +799,134 @@ local methods = {
       end
     end
 
+    function self.callbacks.wagoStopIgnoreAll()
+      -- remove ignore flags
+      self.data.ignoreWagoUpdate = nil
+      self.data.skipWagoUpdate = nil
+      -- update menu entries
+      local wagoMenu = self.menu[8].menuList
+      wagoMenu[1].func = self.callbacks.wagoIgnoreAll
+      wagoMenu[1].text = L["Ignore all Updates"]
+      if self.update.slug then
+        tinsert(wagoMenu, {
+          text = L["Ignore this Update"],
+          notCheckable = 1,
+          func = self.callbacks.wagoIgnoreNext
+        })
+        tinsert(wagoMenu, {
+          text = " ",
+          notClickable = 1,
+          notCheckable = 1,
+        });
+        tinsert(wagoMenu, {
+          text = L["Update this Aura"],
+          notCheckable = 1,
+          func = self.callbacks.OnUpdateClick
+        });
+        -- show update frame
+        self.update:Show()
+        self.update:Enable()
+        self.updateLogo:Show()
+      end
+      -- childs
+      if self.data.controlledChildren then
+        for childIndex, childId in pairs(self.data.controlledChildren) do
+          local button = WeakAuras.GetDisplayButton(childId)
+          if button then
+            button.callbacks.wagoStopIgnoreAll()
+          end
+        end
+      end
+    end
+
+    function self.callbacks.wagoIgnoreAll()
+      -- set ignore flag
+      self.data.ignoreWagoUpdate = true
+      -- update menu entries
+      local wagoMenu = self.menu[8].menuList
+      wagoMenu[1].func = self.callbacks.wagoStopIgnoreAll
+      wagoMenu[1].text = L["Stop ignoring Updates"]
+      if self.update.slug then
+        tremove(wagoMenu, 2)
+        tremove(wagoMenu, 2)
+        tremove(wagoMenu, 2)
+        -- hide update frame
+        self.update:Hide()
+        self.update:Disable()
+        self.updateLogo:Hide()
+      end
+      -- childs
+      if self.data.controlledChildren then
+        for childIndex, childId in pairs(self.data.controlledChildren) do
+          local button = WeakAuras.GetDisplayButton(childId)
+          if button then
+            button.callbacks.wagoIgnoreAll()
+          end
+        end
+      end
+    end
+
+    function self.callbacks.wagoStopIgnoreNext()
+      -- remove skip flag
+      self.data.skipWagoUpdate = nil
+      if self.update.slug then
+        -- update menu entries
+        local wagoMenu = self.menu[8].menuList
+        wagoMenu[2].func = self.callbacks.wagoIgnoreNext
+        wagoMenu[2].text = L["Ignore this Update"]
+        tinsert(wagoMenu, {
+          text = " ",
+          notClickable = 1,
+          notCheckable = 1,
+        });
+        tinsert(wagoMenu, {
+          text = L["Update this Aura"],
+          notCheckable = 1,
+          func = self.callbacks.OnUpdateClick
+        });
+        -- show update frame
+        self.update:Show()
+        self.update:Enable()
+        self.updateLogo:Show()
+      end
+      -- childs
+      if self.data.controlledChildren then
+        for childIndex, childId in pairs(self.data.controlledChildren) do
+          local button = WeakAuras.GetDisplayButton(childId)
+          if button then
+            button.callbacks.wagoStopIgnoreNext()
+          end
+        end
+      end
+    end
+
+    function self.callbacks.wagoIgnoreNext()
+      if self.update.slug then
+        -- skip wago version
+        self.data.skipWagoUpdate = self.update.wagoVersion
+        -- update menu entries
+        local wagoMenu = self.menu[8].menuList
+        wagoMenu[2].func = self.callbacks.wagoStopIgnoreNext
+        wagoMenu[2].text = L["Stop ignoring this Update"]
+        tremove(wagoMenu, 3)
+        tremove(wagoMenu, 3)
+        tremove(wagoMenu, 3)
+        -- hide update frame
+        self.update:Hide()
+        self.update:Disable()
+        self.updateLogo:Hide()
+      end
+      -- childs
+      if self.data.controlledChildren then
+        for childIndex, childId in pairs(self.data.controlledChildren) do
+          local button = WeakAuras.GetDisplayButton(childId)
+          if button then
+            button.callbacks.wagoIgnoreNext()
+          end
+        end
+      end
+    end
+
     self.frame.terribleCodeOrganizationHackTable = {};
 
     function self.frame.terribleCodeOrganizationHackTable.IsGroupingOrCopying()
@@ -799,6 +954,8 @@ local methods = {
     tinsert(copyEntries, clipboard.copyLoadEntry);
     tinsert(copyEntries, clipboard.copyActionsEntry);
     tinsert(copyEntries, clipboard.copyAnimationsEntry);
+    tinsert(copyEntries, clipboard.copyAuthorOptionsEntry);
+    tinsert(copyEntries, clipboard.copyUserConfigEntry);
 
     self:SetTitle(data.id);
     self.menu = {
@@ -922,6 +1079,87 @@ local methods = {
     self.ungroup:SetScript("OnClick", self.callbacks.OnUngroupClick);
     self.upgroup:SetScript("OnClick", self.callbacks.OnUpGroupClick);
     self.downgroup:SetScript("OnClick", self.callbacks.OnDownGroupClick);
+
+    if WeakAurasCompanion then
+      if self.data.url and self.data.url ~= "" then
+        local slug, version = self.data.url:match("wago.io/([^/]+)/([0-9]+)")
+        if not slug and not version then
+          slug = self.data.url:match("wago.io/([^/]+)$")
+          version = 1
+        end
+        if slug and version then
+          local wago = WeakAurasCompanion[slug]
+          -- add sync entry in menu
+          tinsert(self.menu, 8, {
+            text = '|TInterface\\OptionsFrame\\UI-OptionsFrame-NewFeatureIcon:0|t' .. L["Wago Update"],
+            notCheckable = 1,
+            hasArrow = true,
+            menuList = {
+              {
+                text = self.data.ignoreWagoUpdate and L["Stop ignoring Updates"] or L["Ignore all Updates"],
+                notCheckable = 1,
+                func = self.data.ignoreWagoUpdate and self.callbacks.wagoStopIgnoreAll or self.callbacks.wagoIgnoreAll
+              }
+            }
+          });
+          local wagoMenu = self.menu[8].menuList
+          -- there is a string for this aura
+          if wago and wago.wagoVersion then
+            self.update.wagoVersion = tonumber(wago.wagoVersion)
+            self.update.version = tonumber(version)
+            -- string is newer
+            if self.update.wagoVersion > self.update.version then
+              self.update.title = L["Update "] .. wago.name .. L[" by "] .. wago.author
+              self.update.desc = L["From version "] .. version .. L[" to version "] .. wago.wagoVersion
+              self.update.slug = slug
+              if wago.versionNote then
+                self.update.desc = ("%s\n\n%s"):print(self.update.desc, wago.versionNote)
+              end
+              self.update:SetScript("OnClick", self.callbacks.OnUpdateClick);
+
+              -- add skip version entry in menu
+              if not self.data.ignoreWagoUpdate then
+                if self.update.wagoVersion == self.data.skipWagoUpdate then
+                  tinsert(wagoMenu, {
+                    text =  L["Stop ignoring this Update"],
+                    notCheckable = 1,
+                    func = self.callbacks.wagoStopIgnoreNext
+                  });
+                else
+                  tinsert(wagoMenu, {
+                    text = L["Ignore this Update"],
+                    notCheckable = 1,
+                    func = self.callbacks.wagoIgnoreNext
+                  });
+                end
+              end
+
+              -- show or hide update icon
+              if self.update.wagoVersion == self.data.skipWagoUpdate or self.data.ignoreWagoUpdate then
+                self.update:Hide()
+                self.update:Disable()
+                self.updateLogo:Hide()
+              else
+                self.update:Show()
+                self.update:Enable()
+                self.updateLogo:Show()
+                tinsert(wagoMenu, {
+                  text = " ",
+                  notClickable = 1,
+                  notCheckable = 1,
+                });
+                tinsert(wagoMenu, {
+                  text = L["Update this Aura"],
+                  notCheckable = 1,
+                  func = self.callbacks.OnUpdateClick
+                });
+              end
+            end
+          end
+        end
+      end
+    end
+
     if(data.parent) then
       local parentData = WeakAuras.GetData(data.parent);
       local index;
@@ -962,42 +1200,7 @@ local methods = {
         namestable[1] = L["No Children"];
       end
     else
-      for triggernum, triggerData in ipairs(data.triggers) do
-        local trigger = triggerData.trigger
-        if(trigger) then
-          if(trigger.type == "aura") then
-            if(trigger.fullscan) then
-              tinsert(namestable, {L["Aura:"], L["Full Scan"]});
-            else
-              for index, name in pairs(trigger.names) do
-                local left = " ";
-                if(index == 1) then
-                  if(#trigger.names > 0) then
-                    if(#trigger.names > 1) then
-                      left = L["Auras:"];
-                    else
-                      left = L["Aura:"];
-                    end
-                  end
-                end
-                local icon = WeakAuras.spellCache.GetIcon(name) or "Interface\\Icons\\INV_Misc_QuestionMark";
-                tinsert(namestable, {left, name, icon});
-              end
-            end
-          elseif(trigger.type == "event" or trigger.type == "status") then
-            if(trigger.type == "event") then
-              tinsert(namestable, {L["Trigger:"], (WeakAuras.event_types[trigger.event] or L["Undefined"])});
-            else
-              tinsert(namestable, {L["Trigger:"], (WeakAuras.status_types[trigger.event] or L["Undefined"])});
-            end
-            if(trigger.event == "Combat Log" and trigger.subeventPrefix and trigger.subeventSuffix) then
-              tinsert(namestable, {L["Message type:"], (WeakAuras.subevent_prefix_types[trigger.subeventPrefix] or L["Undefined"]).." "..(WeakAuras.subevent_suffix_types[trigger.subeventSuffix] or L["Undefined"])});
-            end
-          else
-            tinsert(namestable, {L["Trigger:"], L["Custom"]});
-          end
-        end
-      end
+      WeakAuras.GetTriggerDescription(data, -1, namestable)
     end
     if(WeakAuras.CanHaveClones(data)) then
       tinsert(namestable, {" ", "|cFF00FF00"..L["Auto-cloning enabled"]})
@@ -1045,10 +1248,10 @@ local methods = {
     Show_Long_Tooltip(self.frame, self.frame.description);
   end
   end,
-  ["SetGrouping"] = function(self, groupingData)
+  ["SetGrouping"] = function(self, groupingData, multi)
     self.grouping = groupingData;
     if(self.grouping) then
-      if(self.data.id == self.grouping.id) then
+      if(self.data.id == self.grouping.id or multi) then
         self.frame:SetScript("OnClick", self.callbacks.OnClickGroupingSelf);
         self:SetDescription(L["Cancel"], L["Do not group this display"]);
       else
@@ -1064,6 +1267,31 @@ local methods = {
       self.frame:SetScript("OnClick", self.callbacks.OnClickNormal);
       self:Enable();
     end
+  end,
+  ["Ungroup"] = function(self)
+    if (WeakAuras.IsImporting()) then return end;
+    local parentData = WeakAuras.GetData(self.data.parent);
+    if not parentData then return end;
+    local index;
+    for childIndex, childId in pairs(parentData.controlledChildren) do
+      if(childId == self.data.id) then
+        index = childIndex;
+        break;
+      end
+    end
+    if(index) then
+      tremove(parentData.controlledChildren, index);
+      WeakAuras.Add(parentData);
+      WeakAuras.ReloadGroupRegionOptions(parentData);
+    else
+      error("Display thinks it is a member of a group which does not control it");
+    end
+    self:SetGroup();
+    self.data.parent = nil;
+    WeakAuras.Add(self.data);
+    WeakAuras.UpdateGroupOrders(parentData);
+    WeakAuras.UpdateDisplayButton(parentData);
+    WeakAuras.SortDisplayButtons();
   end,
   ["SetDragging"] = function(self, data, drop, size)
     if (size) then
@@ -1693,6 +1921,47 @@ local function Constructor()
   expand:SetScript("OnEnter", function() Show_Tooltip(button, expand.title, expand.desc) end);
   expand:SetScript("OnLeave", Hide_Tooltip);
 
+  local update, updateLogo
+  if WeakAurasCompanion then
+    update = CreateFrame("BUTTON", nil, button);
+    button.update = update
+    update.disabled = true;
+    update.func = function() end;
+    update:SetNormalTexture([[Interface\AddOns\WeakAuras\Media\Textures\wagoupdate_refresh.tga]]);
+    update:Disable();
+    update:SetWidth(24);
+    update:SetHeight(24);
+    update:SetPoint("RIGHT", button, "RIGHT", -35, 0);
+    update.title = "";
+    update.desc = "";
+
+    -- Add logo
+    updateLogo = CreateFrame("Frame", nil, button)
+    button.updateLogo = updateLogo
+    local tex = updateLogo:CreateTexture(nil, "OVERLAY")
+    tex:SetTexture([[Interface\AddOns\WeakAuras\Media\Textures\wagoupdate_logo.tga]])
+    tex:SetAllPoints()
+    updateLogo:SetSize(24,24)
+    updateLogo:SetPoint("CENTER",update)
+
+    -- Animation On Hover
+    local animGroup = update:CreateAnimationGroup()
+    update.animGroup = animGroup
+    local animRotate = animGroup:CreateAnimation("rotation")
+    animRotate:SetDegrees(-360)
+    animRotate:SetDuration(1)
+    animRotate:SetSmoothing("OUT")
+
+    animGroup:SetScript("OnFinished",function() if (MouseIsOver(update)) then animGroup:Play() end end)
+    update:SetScript("OnEnter", function()
+      animGroup:Play()
+      Show_Tooltip(button, update.title, update.desc)
+    end);
+    update:SetScript("OnLeave", Hide_Tooltip);
+    update:Hide();
+    updateLogo:Hide()
+  end
+
   local widget = {
     frame = button,
     title = title,
@@ -1710,6 +1979,8 @@ local function Constructor()
     loaded = loaded,
     background = background,
     expand = expand,
+    update = update,
+    updateLogo = updateLogo,
     type = Type
   }
   for method, func in pairs(methods) do

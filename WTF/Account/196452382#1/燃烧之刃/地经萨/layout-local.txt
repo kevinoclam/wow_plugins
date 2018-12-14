@@ -6,10 +6,10 @@ X: 0
 Y: 0
 W: 365
 H: 240
-Frame: CharacterFrame
+Frame: DetailsPlayerDetailsWindow
 FrameLevel: 1
-Anchor: TOPLEFT
-X: 16
-Y: -116
-W: 338
-H: 424
+Anchor: BOTTOM
+X: 42
+Y: 51
+W: 790
+H: 454

@@ -1,7 +1,5 @@
 VER 3 000000000000004F " " "INV_Misc_QuestionMark"
-#showtooltip 
-/cast 跳跃
-/cast 撕扯
+/cast 活血术,法力茶
 END
 VER 3 000000000000005B " " "INV_Misc_QuestionMark"
 #showtooltip 夺魂

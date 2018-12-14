@@ -5,7 +5,7 @@ MEETINGSTONE_CHARACTER_DB = {
 	},
 	["profiles"] = {
 		["Dhuntress - 燃烧之刃"] = {
-			["version"] = "80000.06",
+			["version"] = "80000.07",
 			["settings"] = {
 				["storage"] = {
 					["y"] = 0,

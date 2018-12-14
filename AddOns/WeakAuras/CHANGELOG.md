@@ -1,12 +1,14 @@
-# [2.8.1-2-g8556e72](https://github.com/WeakAuras/WeakAuras2/tree/8556e7209c2496e5682448615ea783567600bdda) (2018-10-04)
+# [2.10.9](https://github.com/WeakAuras/WeakAuras2/tree/2.10.9) (2018-12-12)
 
-[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.8.1...8556e7209c2496e5682448615ea783567600bdda)
+[Full Changelog](https://github.com/WeakAuras/WeakAuras2/compare/2.10.8...2.10.9)
 
-Allen Faure (1):
+## Highlights
 
-- change tooltip phrase
+ Fix error in LoadEncounterScripts 
 
-Irame (1):
+## Commits
 
-- Change Zoom property by Condition (#804)
+InfusOnWoW (1):
+
+- Fix error in LoadEncounterScripts
 

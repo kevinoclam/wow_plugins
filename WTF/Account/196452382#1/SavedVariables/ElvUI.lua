@@ -15,15 +15,15 @@ ElvDB = {
 	["gold"] = {
 		["燃烧之刃"] = {
 			["弗瑞德姆"] = 708,
-			["扎丝特思"] = 180128611,
+			["扎丝特思"] = 161979722,
 			["看看我就"] = 100000,
 			["李书炆"] = 100000,
-			["牛奶酒"] = 1305529977,
+			["牛奶酒"] = 1217896355,
 			["迪达克范特西"] = 0,
-			["地经萨"] = 205875571,
+			["地经萨"] = 206467395,
 			["币开头小德"] = 168757069,
-			["Dhuntress"] = 47666844,
-			["洛克坦丶欧嘎"] = 64551969,
+			["Dhuntress"] = 50694099,
+			["洛克坦丶欧嘎"] = 68936435,
 		},
 	},
 	["namespaces"] = {
@@ -49,17 +49,6 @@ ElvDB = {
 		["uiScale"] = "0.71111111111111",
 		["Ver"] = "20180913A",
 		["userInformedNewChanges1"] = true,
-		["unitframe"] = {
-			["aurafilters"] = {
-				["RaidDebuffs"] = {
-					["spells"] = {
-						[206609] = {
-							["priority"] = 99,
-						},
-					},
-				},
-			},
-		},
 		["luaError"] = {
 			"...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:2057: attempt to call field 'IsPlayingLoadAnimation' (a nil value)...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:2057: in function `UpdateZoneWidgets'\n...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1720: in function <...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1712>mapID = 1015\ntaskInfo = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n}\nindex = 1\n(*temporary) = nil\n(*temporary) = \"attempt to call field 'IsPlayingLoadAnimation' (a nil value)\"\nMAPID_BROKENISLES = 1007\nWorldQuestTracker = <table> {\n LastUpdate = 1568527.562\n QUEST_COMMENTS = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:145\n GetQuest_Info = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1507\n UnregisterComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:179\n Cache_ShownQuestOnWorldMap = <table> {\n }\n CheckTimeLeftOnQuestsFromTracker_Load = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:4518\n QueuedRefresh = 1\n IconPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1094\n GetTemplate = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:1005\n mapTables = <table> {\n }\n DoubleTapFrame = WorldQuestTrackerDoubleTapFrame {\n }\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:440\n GetAllWorldQuests_Ids = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1092\n MapOpenedAt = 1568526.285\n ScheduleTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:92\n ShowPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1783\n RegisterMessage = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n Msg = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:287\n CreateScrollBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\scrollbar.lua:7\n ShowPanicWarning = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1436\n ShowTextPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1843\n db = <table> {\n }\n UnregisterAllComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:200\n SetEnabledState = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n ShowTutorialAlertFrame = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:727\n QuestTrackList = <table> {\n }\n RefreshStatusBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1669\n IsPartyQuest = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:452\n HideZoneWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:2025\n LastWorldMapClick = 0\n OnInit = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:613\n GetQuestReward_Resource = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1447\n WaitUntilWorldMapIsClose = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:439\n OnInitialize = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\addon.lua:15\n NewModule = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:266\n CanShowWorldMapWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1045\n MapSeason = 1\n PLAYER_STARTED_MOVING = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:5031\n GetQuestFilterTypeAndOrder = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:6282\n table = <table> {\n }\n ColorPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1070\n CreateButton = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\button.lua:921\n CreateSwitch = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\slider.lua:893\n LastMapID = 1015\n GetTrackedQuestsOnDB = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:397\n SavedQuestList_CleanUp = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1594\n TAXIMAP_OPE12362017/12/17 01:52:09", -- [1]
 			"...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:2057: attempt to call field 'IsPlayingLoadAnimation' (a nil value)...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:2057: in function `UpdateZoneWidgets'\n...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1720: in function <...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1712>mapID = 1015\ntaskInfo = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n}\nindex = 1\n(*temporary) = nil\n(*temporary) = \"attempt to call field 'IsPlayingLoadAnimation' (a nil value)\"\nMAPID_BROKENISLES = 1007\nWorldQuestTracker = <table> {\n LastUpdate = 1568527.562\n QUEST_COMMENTS = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:145\n GetQuest_Info = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1507\n UnregisterComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:179\n Cache_ShownQuestOnWorldMap = <table> {\n }\n CheckTimeLeftOnQuestsFromTracker_Load = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:4518\n QueuedRefresh = 1\n IconPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1094\n GetTemplate = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:1005\n mapTables = <table> {\n }\n DoubleTapFrame = WorldQuestTrackerDoubleTapFrame {\n }\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:440\n GetAllWorldQuests_Ids = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1092\n MapOpenedAt = 1568526.285\n ScheduleTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:92\n ShowPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1783\n RegisterMessage = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n Msg = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:287\n CreateScrollBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\scrollbar.lua:7\n ShowPanicWarning = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1436\n ShowTextPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1843\n db = <table> {\n }\n UnregisterAllComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:200\n SetEnabledState = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n ShowTutorialAlertFrame = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:727\n QuestTrackList = <table> {\n }\n RefreshStatusBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1669\n IsPartyQuest = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:452\n HideZoneWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:2025\n LastWorldMapClick = 0\n OnInit = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:613\n GetQuestReward_Resource = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1447\n WaitUntilWorldMapIsClose = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:439\n OnInitialize = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\addon.lua:15\n NewModule = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:266\n CanShowWorldMapWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1045\n MapSeason = 1\n PLAYER_STARTED_MOVING = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:5031\n GetQuestFilterTypeAndOrder = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:6282\n table = <table> {\n }\n ColorPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1070\n CreateButton = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\button.lua:921\n CreateSwitch = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\slider.lua:893\n LastMapID = 1015\n GetTrackedQuestsOnDB = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:397\n SavedQuestList_CleanUp = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1594\n TAXIMAP_OPE12362017/12/17 01:52:09", -- [2]
@@ -81,6 +70,17 @@ ElvDB = {
 			"...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:2057: attempt to call field 'IsPlayingLoadAnimation' (a nil value)...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:2057: in function `UpdateZoneWidgets'\n...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1720: in function <...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1712>mapID = 1015\ntaskInfo = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n}\nindex = 1\n(*temporary) = nil\n(*temporary) = \"attempt to call field 'IsPlayingLoadAnimation' (a nil value)\"\nMAPID_BROKENISLES = 1007\nWorldQuestTracker = <table> {\n LastUpdate = 1568527.562\n QUEST_COMMENTS = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:145\n GetQuest_Info = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1507\n UnregisterComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:179\n Cache_ShownQuestOnWorldMap = <table> {\n }\n CheckTimeLeftOnQuestsFromTracker_Load = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:4518\n QueuedRefresh = 1\n IconPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1094\n GetTemplate = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:1005\n mapTables = <table> {\n }\n DoubleTapFrame = WorldQuestTrackerDoubleTapFrame {\n }\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:440\n GetAllWorldQuests_Ids = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1092\n MapOpenedAt = 1568526.285\n ScheduleTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:92\n ShowPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1783\n RegisterMessage = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n Msg = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:287\n CreateScrollBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\scrollbar.lua:7\n ShowPanicWarning = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1436\n ShowTextPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1843\n db = <table> {\n }\n UnregisterAllComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:200\n SetEnabledState = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n ShowTutorialAlertFrame = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:727\n QuestTrackList = <table> {\n }\n RefreshStatusBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1669\n IsPartyQuest = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:452\n HideZoneWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:2025\n LastWorldMapClick = 0\n OnInit = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:613\n GetQuestReward_Resource = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1447\n WaitUntilWorldMapIsClose = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:439\n OnInitialize = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\addon.lua:15\n NewModule = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:266\n CanShowWorldMapWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1045\n MapSeason = 1\n PLAYER_STARTED_MOVING = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:5031\n GetQuestFilterTypeAndOrder = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:6282\n table = <table> {\n }\n ColorPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1070\n CreateButton = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\button.lua:921\n CreateSwitch = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\slider.lua:893\n LastMapID = 1015\n GetTrackedQuestsOnDB = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:397\n SavedQuestList_CleanUp = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1594\n TAXIMAP_OPE12362017/12/17 01:52:09", -- [18]
 			"...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:6378: attempt to call upvalue 'QuestMapFrame_IsQuestWorldQuest' (a nil value)...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:6378: in function `UpdateWorldQuestsOnWorldMap'\n...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1050: in function `CanShowWorldMapWidgets'\n...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1716: in function <...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1712>noCache = false\nshowFade = true\nisQuestFlaggedRecheck = nil\nforceCriteriaAnimation = nil\nquestsAvailable = <table> {\n 1015 = <table> {\n }\n}\nneedAnotherUpdate = false\nfilters = <table> {\n pet_battles = true\n garrison_resource = true\n equipment = true\n trade_skill = true\n profession = true\n artifact_power = true\n dungeon = true\n gold = true\n pvp = true\n}\ntimePriority = false\n(for generator) = <function> defined =[C]:-1\n(for state) = <table> {\n 1015 = <table> {\n }\n 1024 = <table> {\n }\n 1096 = <table> {\n }\n 1033 = <table> {\n }\n 1018 = <table> {\n }\n 1017 = <table> {\n }\n}\n(for control) = 1015\nmapId = 1015\nconfigTable = <table> {\n worldMapLocationMaxElvUI = <table> {\n }\n squarePoints = <table> {\n }\n worldMapLocationMax = <table> {\n }\n widgets = <table> {\n }\n bipAnchor = <table> {\n }\n line = <unnamed> {\n }\n factionFrame = WorldQuestTrackerFactionFrame1015 {\n }\n worldMapLocation = <table> {\n }\n factionAnchor = <table> {\n }\n}\ntaskInfo = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n 8 = <table> {\n }\n 9 = <table> {\n }\n}\nshownQuests = 0\n(for generator) = <function> defined =[C]:-1\n(for state) = <table> {\n 1 = <table> {\n }\n 2 = <table> {\n }\n 3 = <table> {\n }\n 4 = <table> {\n }\n 5 = <table> {\n }\n 6 = <table> {\n }\n 7 = <table> {\n }\n 8 = <table> {\n }\n 9 = <table> {\n }\n}\n(for control) = 1\ni = 1\ninfo = <table> {\n y = 0.57156085968018\n x = 0.36261993646622\n floor = 0\n numObjectives = 1\n questId = 44784\n inProgress = false\n}\nquestID = 44784\n(*temporary) = nil\n(*temporary) = 44784\n(*temporary) = \"attempt to call upvalue 'QuestMapFrame_IsQuestWorldQuest' (a nil value)\"\nWorldQuestTracker = <table> {\n LastUpdate = 9088.6\n QUEST_COMMENTS = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:145\n GetQuest_Info = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1507\n UnregisterComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:179\n Cache_ShownQuestOnWorldMap = <table> {\n }\n CheckTimeLeftOnQuestsFromTracker_Load = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:4518\n QueuedRefresh = 1\n IconPick = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\panel.lua:1094\n GetTemplate = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\fw.lua:1043\n NoAutoSwitchToWorldMap = true\n mapTables = <table> {\n }\n DoubleTapFrame = WorldQuestTrackerDoubleTapFrame {\n }\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:440\n SetBountyAmountCompleted = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:7064\n PlayLoadingAnimation = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:7046\n GetAllWorldQuests_Ids = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1092\n InGroup = true\n MapOpenedAt = 9086.231\n ScheduleTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:92\n WorldMap_ResourceIndicator = <table> {\n }\n FlyMapHook = true\n Taxy_CurrentShownBlips = <table> {\n }\n ShowPromptPanel = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\panel.lua:1783\n RegisterMessage = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n Msg = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\fw.lua:325\n CreateScrollBar = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\scrollbar.lua:7\n ShowPanicWarning = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\panel.lua:1436\n SendCommMessage = <function> defined @Interface\\AddOns\\libs\\AceComm-3.0\\AceComm-3.0.lua:84\n db = <table> {\n }\n UnregisterAllComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:200\n SetEnabledState = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n WorldMap_APowerIndicator = <table> {\n }\n ShowTutorialAlertFrame = <function> defined @Interface\\AddOns\\Details\\Libs\\DF\\fw.lua:765\n QuestTrackList = <table> {\n }\n GROUP_JOINE12362016/10/27 23:00:18", -- [19]
 			"...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1722: attempt to call field 'IsPlayingLoadAnimation' (a nil value)...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker-r63.lua:1722: in function <...rface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1712>(*temporary) = nil\n(*temporary) = \"attempt to call field 'IsPlayingLoadAnimation' (a nil value)\"\ncurrentMap = 321\nWorldQuestTracker = <table> {\n LastUpdate = 0\n QUEST_COMMENTS = <table> {\n }\n CancelTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:145\n GetQuest_Info = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1507\n UnregisterComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:179\n Cache_ShownQuestOnWorldMap = <table> {\n }\n CheckTimeLeftOnQuestsFromTracker_Load = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:4518\n QueuedRefresh = 1\n IconPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1094\n GetTemplate = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:1005\n mapTables = <table> {\n }\n DoubleTapFrame = WorldQuestTrackerDoubleTapFrame {\n }\n SetDefaultModulePrototype = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:440\n GetAllWorldQuests_Ids = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1092\n MapOpenedAt = 423366.295\n ScheduleTimer = <function> defined @Interface\\AddOns\\libs\\AceTimer-3.0\\AceTimer-3.0.lua:92\n ShowPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1783\n RegisterMessage = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:116\n Msg = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:287\n CreateScrollBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\scrollbar.lua:7\n ShowPanicWarning = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1436\n ShowTextPromptPanel = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1843\n db = <table> {\n }\n UnregisterAllComm = <function> defined @Interface\\AddOns\\Libs\\CallbackHandler-1.0\\CallbackHandler-1.0.lua:200\n SetEnabledState = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:455\n ShowTutorialAlertFrame = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\fw.lua:727\n QuestTrackList = <table> {\n }\n RefreshStatusBar = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1669\n IsPartyQuest = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:452\n HideZoneWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:2025\n LastWorldMapClick = 0\n OnInit = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:613\n GetQuestReward_Resource = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1447\n WaitUntilWorldMapIsClose = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:439\n OnInitialize = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\addon.lua:15\n NewModule = <function> defined @Interface\\AddOns\\Libs\\AceAddon-3.0\\AceAddon-3.0.lua:266\n CanShowWorldMapWidgets = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1045\n MapSeason = 6\n PLAYER_STARTED_MOVING = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:5031\n GetQuestFilterTypeAndOrder = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:6282\n table = <table> {\n }\n ColorPick = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\panel.lua:1070\n CreateButton = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\button.lua:921\n CreateSwitch = <function> defined @Interface\\AddOns\\WorldQuestTracker\\libs\\DF\\slider.lua:893\n LastMapID = 4\n GetTrackedQuestsOnDB = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:397\n SavedQuestList_CleanUp = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:1594\n TAXIMAP_OPENED = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:5612\n DumpTrackingList = <function> defined @Interface\\AddOns\\WorldQuestTracker\\WorldQuestTracker.lua:368\n trim12362017/09/01 23:11:08", -- [20]
+		},
+		["unitframe"] = {
+			["aurafilters"] = {
+				["RaidDebuffs"] = {
+					["spells"] = {
+						[206609] = {
+							["priority"] = 99,
+						},
+					},
+				},
+			},
 		},
 	},
 	["profiles"] = {
@@ -391,11 +391,6 @@ ElvDB = {
 				},
 				["enhancedPvpMessages"] = false,
 				["topPanel"] = false,
-				["bordercolor"] = {
-					["b"] = 0,
-					["g"] = 0,
-					["r"] = 0,
-				},
 				["transparentStyle"] = 2,
 				["experience"] = {
 					["height"] = 220,
@@ -406,7 +401,11 @@ ElvDB = {
 				},
 				["bottomPanel"] = false,
 				["questfontSize"] = 13,
-				["autoRoll"] = true,
+				["bordercolor"] = {
+					["b"] = 0,
+					["g"] = 0,
+					["r"] = 0,
+				},
 			},
 			["convertExp"] = true,
 			["bossAuraFiltersConverted"] = true,
@@ -460,6 +459,12 @@ ElvDB = {
 			["layoutSet"] = "dpsMelee",
 			["thinBorderColorSet"] = true,
 			["bagSortIgnoreItemsReset"] = true,
+			["tooltip"] = {
+				["fontSize"] = 13,
+				["headerFontSize"] = 13,
+				["textFontSize"] = 13,
+				["smallTextFontSize"] = 13,
+			},
 			["bagsOffsetFixed"] = true,
 			["movers"] = {
 				["TopCenterContainerMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,0,-107",
@@ -467,7 +472,7 @@ ElvDB = {
 				["EuiInfoBar1Mover"] = "TOP,ElvUIParent,TOP,-312,-113",
 				["PetAB"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-281,0",
 				["ElvUF_RaidMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,1284,770",
-				["LeftChatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,0,0",
+				["LeftChatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,4,20",
 				["GMMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-492,-58",
 				["BuffsMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,0,0",
 				["BossButton"] = "BOTTOM,ElvUIParent,BOTTOM,144,435",
@@ -484,7 +489,7 @@ ElvDB = {
 				["RightChatMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,0",
 				["EuiInfoBar2Mover"] = "TOPLEFT,ElvUIParent,TOPLEFT,239,-25",
 				["TotemBarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,0,182",
-				["VehicleSeatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,419,0",
+				["VehicleSeatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,418,4",
 				["ElvUF_TargetTargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,109,153",
 				["ExperienceBarMover"] = "TOP,ElvUIParent,TOP,-28,26",
 				["ElvAB_2"] = "BOTTOM,ElvUIParent,BOTTOM,-29,0",
@@ -509,7 +514,7 @@ ElvDB = {
 				["ObjectiveFrameMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,89,-128",
 				["BNETMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-416,0",
 				["VOICECHAT"] = "TOPLEFT,ElvUIParent,TOPLEFT,221,-92",
-				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,0,221",
+				["ElvAB_5"] = "BOTTOM,ElvUIParent,BOTTOM,0,220",
 				["HonorBarMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,615,-264",
 				["ElvUF_TargetCastbarMover"] = "TOP,ElvUIParent,TOP,0,0",
 				["TooltipMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,0,315",
@@ -521,12 +526,6 @@ ElvDB = {
 				["RaidCDAnchorMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-421,-51",
 				["DebuffsMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,0,-44",
 				["MinimapMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,0,0",
-			},
-			["tooltip"] = {
-				["fontSize"] = 13,
-				["headerFontSize"] = 13,
-				["textFontSize"] = 13,
-				["smallTextFontSize"] = 13,
 			},
 			["AuraWatch"] = {
 				["loadDefault"] = true,
@@ -763,15 +762,28 @@ ElvDB = {
 					["tank"] = {
 						["enable"] = false,
 					},
-					["targettarget"] = {
-						["debuffs"] = {
-							["enable"] = false,
+					["raid"] = {
+						["healPrediction"] = {
+							["enable"] = true,
 						},
-						["power"] = {
-							["height"] = 8,
+						["infoPanel"] = {
+							["height"] = 13,
 						},
-						["width"] = 180,
-						["height"] = 65,
+						["name"] = {
+							["fontSize"] = 12,
+						},
+						["height"] = 55,
+						["rdebuffs"] = {
+							["size"] = 24,
+						},
+						["raidWideSorting"] = false,
+						["readycheckIcon"] = {
+							["attachTo"] = "Frame",
+							["yOffset"] = 0,
+							["size"] = 19,
+						},
+						["width"] = 100,
+						["numGroups"] = 8,
 					},
 					["pet"] = {
 						["debuffs"] = {
@@ -794,6 +806,16 @@ ElvDB = {
 							["width"] = 150,
 							["height"] = 20,
 						},
+					},
+					["targettarget"] = {
+						["debuffs"] = {
+							["enable"] = false,
+						},
+						["power"] = {
+							["height"] = 8,
+						},
+						["width"] = 180,
+						["height"] = 65,
 					},
 					["party"] = {
 						["debuffs"] = {
@@ -832,29 +854,6 @@ ElvDB = {
 							["height"] = 15,
 						},
 					},
-					["raid"] = {
-						["healPrediction"] = {
-							["enable"] = true,
-						},
-						["infoPanel"] = {
-							["height"] = 13,
-						},
-						["name"] = {
-							["fontSize"] = 12,
-						},
-						["height"] = 55,
-						["rdebuffs"] = {
-							["size"] = 24,
-						},
-						["raidWideSorting"] = false,
-						["readycheckIcon"] = {
-							["attachTo"] = "Frame",
-							["yOffset"] = 0,
-							["size"] = 19,
-						},
-						["width"] = 100,
-						["numGroups"] = 8,
-					},
 					["player"] = {
 						["debuffs"] = {
 							["enable"] = false,
@@ -886,9 +885,6 @@ ElvDB = {
 							["height"] = 8,
 						},
 					},
-					["raid40"] = {
-						["enable"] = false,
-					},
 					["focus"] = {
 						["power"] = {
 							["height"] = 8,
@@ -898,6 +894,12 @@ ElvDB = {
 						["castbar"] = {
 							["width"] = 180,
 						},
+					},
+					["assist"] = {
+						["enable"] = false,
+					},
+					["arena"] = {
+						["enable"] = false,
 					},
 					["target"] = {
 						["debuffs"] = {
@@ -944,12 +946,6 @@ ElvDB = {
 							["xOffset"] = 0,
 							["yOffset"] = -3,
 						},
-					},
-					["arena"] = {
-						["enable"] = false,
-					},
-					["assist"] = {
-						["enable"] = false,
 					},
 					["boss"] = {
 						["debuffs"] = {
@@ -998,16 +994,16 @@ ElvDB = {
 						["left"] = "Guild",
 						["middle"] = "System",
 					},
-					["BottomMiniPanel"] = "E_Coord",
 					["RightMiniPanel"] = "",
-					["TopDataTextsBar2"] = "",
-					["TopDataTextsBar1"] = "",
+					["TopDataTextsBar4"] = "",
 					["TopDataTextsBar3"] = {
 						["right"] = "E_Raidtool",
 						["left"] = "Armor",
 						["middle"] = "Bags",
 					},
-					["TopDataTextsBar4"] = "",
+					["TopDataTextsBar2"] = "",
+					["BottomMiniPanel"] = "E_Coord",
+					["TopDataTextsBar1"] = "",
 				},
 				["wordWrap"] = true,
 				["minimapTopLeft"] = true,
@@ -1027,11 +1023,6 @@ ElvDB = {
 					["backdropSpacing"] = 4,
 				},
 				["euiabstyle"] = "High",
-				["bar1"] = {
-					["inheritGlobalFade"] = true,
-					["backdropSpacing"] = 0,
-					["buttonsPerRow"] = 6,
-				},
 				["bar7"] = {
 					["backdropSpacing"] = 4,
 				},
@@ -1041,19 +1032,24 @@ ElvDB = {
 					["backdropSpacing"] = 0,
 				},
 				["backdropSpacingConverted"] = true,
-				["bar6"] = {
-					["backdropSpacing"] = 4,
+				["bar1"] = {
+					["inheritGlobalFade"] = true,
+					["backdropSpacing"] = 0,
+					["buttonsPerRow"] = 6,
 				},
+				["globalFadeAlpha"] = 0.8,
 				["bar2"] = {
 					["inheritGlobalFade"] = true,
 					["backdropSpacing"] = 0,
 					["enabled"] = true,
 					["buttonsPerRow"] = 6,
 				},
-				["globalFadeAlpha"] = 0.8,
 				["bar5"] = {
 					["inheritGlobalFade"] = true,
 					["backdropSpacing"] = 0,
+				},
+				["bar6"] = {
+					["backdropSpacing"] = 4,
 				},
 				["stanceBar"] = {
 					["backdropSpacing"] = 4,
@@ -1111,10 +1107,10 @@ ElvDB = {
 				},
 				["itemLevelFontSize"] = 13,
 				["bagWidth"] = 420,
+				["bankWidth"] = 410,
 				["vendorGrays"] = {
 					["enable"] = true,
 				},
-				["bankWidth"] = 410,
 			},
 		},
 		["币开头小德 - 燃烧之刃"] = {
@@ -2248,20 +2244,20 @@ ElvDB = {
 				["ElvUF_FocusMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-382,363",
 				["AutoButtonAnchorMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-11,40",
 				["MinimapMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,499,0",
-				["ElvUF_BodyGuardMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-380",
+				["TotemBarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-572,0",
 				["ElvUF_TargetTargetMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-383,439",
 				["VehicleSeatMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,419,0",
 				["ElvUF_PartyMover"] = "TOPRIGHT,ElvUIParent,BOTTOMLEFT,1357,407",
 				["ExperienceBarMover"] = "TOP,ElvUIParent,TOP,-32,0",
-				["ElvAB_2"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,-367",
+				["EuiInfoBar3Mover"] = "TOPLEFT,ElvUIParent,TOPLEFT,0,0",
 				["ElvUF_TargetMover"] = "BOTTOM,ElvUIParent,BOTTOM,300,440",
 				["EuiExecuteMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,477,284",
 				["LossControlMover"] = "TOP,ElvUIParent,TOP,-1,-486",
 				["ElvUF_Raid40Mover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,4,432",
-				["TotemBarMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-572,0",
+				["ElvUF_PetMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,451,-461",
 				["EuiInfoBar4Mover"] = "TOPLEFT,ElvUIParent,TOPLEFT,0,-25",
 				["ElvAB_1"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,-300",
-				["EuiInfoBar3Mover"] = "TOPLEFT,ElvUIParent,TOPLEFT,0,0",
+				["ElvAB_2"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,-367",
 				["BelowMinimapContainerMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,499,180",
 				["EuiInfoBar2Mover"] = "TOPLEFT,ElvUIParent,TOPLEFT,239,-25",
 				["ElvAB_4"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,-502",
@@ -2281,8 +2277,8 @@ ElvDB = {
 				["TooltipMover"] = "BOTTOMLEFT,ElvUIParent,BOTTOMLEFT,1,311",
 				["ElvUF_TankMover"] = "TOPLEFT,ElvUIParent,BOTTOMLEFT,0,894",
 				["BossHeaderMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,-270,-198",
-				["ElvUF_PetMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,451,-461",
 				["ElvUF_PlayerMover"] = "BOTTOM,ElvUIParent,BOTTOM,-300,440",
+				["ElvUF_BodyGuardMover"] = "TOPLEFT,ElvUIParent,TOPLEFT,4,-380",
 				["RightChatMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,0,0",
 				["RaidCDAnchorMover"] = "BOTTOMRIGHT,ElvUIParent,BOTTOMRIGHT,-420,0",
 				["DebuffsMover"] = "TOPRIGHT,ElvUIParent,TOPRIGHT,0,-43",
@@ -2492,68 +2488,10 @@ ElvDB = {
 					}, -- [4]
 				},
 			},
-			["actionbar"] = {
-				["bar3"] = {
-					["buttons"] = 12,
-					["buttonspacing"] = 2,
-					["backdrop"] = false,
-					["buttonsize"] = 32,
-					["backdropSpacing"] = 0,
+			["clickset"] = {
+				["spec2"] = {
+					["type2"] = "复苏之雾",
 				},
-				["bar6"] = {
-					["backdropSpacing"] = 4,
-				},
-				["bar2"] = {
-					["enabled"] = true,
-					["buttonspacing"] = 2,
-					["buttonsPerRow"] = 6,
-					["backdropSpacing"] = 0,
-					["buttonsize"] = 32,
-				},
-				["bar1"] = {
-					["backdrop"] = false,
-					["buttonspacing"] = 2,
-					["buttonsPerRow"] = 6,
-					["buttonsize"] = 32,
-					["backdropSpacing"] = 0,
-				},
-				["bar8"] = {
-					["backdropSpacing"] = 4,
-				},
-				["bar5"] = {
-					["buttonspacing"] = 2,
-					["showGrid"] = false,
-					["buttonsize"] = 32,
-					["backdropSpacing"] = 0,
-					["backdrop"] = false,
-				},
-				["bar4"] = {
-					["showGrid"] = false,
-					["buttonsize"] = 32,
-					["buttonspacing"] = 2,
-					["buttonsPerRow"] = 6,
-					["backdropSpacing"] = 0,
-					["backdrop"] = false,
-				},
-				["bar7"] = {
-					["backdropSpacing"] = 4,
-				},
-				["barPet"] = {
-					["buttonspacing"] = 2,
-					["buttonsPerRow"] = 6,
-					["backdrop"] = false,
-					["backdropSpacing"] = 0,
-				},
-				["bar9"] = {
-					["backdropSpacing"] = 4,
-				},
-				["stanceBar"] = {
-					["enabled"] = false,
-					["backdropSpacing"] = 4,
-					["buttonsize"] = 38,
-				},
-				["euiabstyle"] = "High",
-				["backdropSpacingConverted"] = true,
 			},
 			["unitframe"] = {
 				["number"] = "W",
@@ -2663,6 +2601,19 @@ ElvDB = {
 						},
 						["width"] = 180,
 					},
+					["assist"] = {
+						["enable"] = false,
+					},
+					["focus"] = {
+						["height"] = 45,
+						["width"] = 180,
+						["castbar"] = {
+							["width"] = 180,
+						},
+						["power"] = {
+							["height"] = 8,
+						},
+					},
 					["target"] = {
 						["debuffs"] = {
 							["anchorPoint"] = "TOPLEFT",
@@ -2693,8 +2644,8 @@ ElvDB = {
 							["text_format"] = "[namecolor][name]",
 							["position"] = "BOTTOMLEFT",
 						},
-						["height"] = 60,
 						["orientation"] = "LEFT",
+						["height"] = 60,
 						["buffs"] = {
 							["attachTo"] = "DEBUFFS",
 							["selfBuffs"] = true,
@@ -2709,19 +2660,6 @@ ElvDB = {
 							["enable"] = false,
 							["selfBuffs"] = true,
 						},
-					},
-					["focus"] = {
-						["height"] = 45,
-						["width"] = 180,
-						["castbar"] = {
-							["width"] = 180,
-						},
-						["power"] = {
-							["height"] = 8,
-						},
-					},
-					["assist"] = {
-						["enable"] = false,
 					},
 					["raid"] = {
 						["raidWideSorting"] = false,
@@ -2754,19 +2692,19 @@ ElvDB = {
 							["xOffset"] = -1,
 							["perrow"] = 5,
 						},
+						["spacing"] = 15,
 						["castbar"] = {
 							["height"] = 10,
 							["latency"] = false,
 							["width"] = 200,
 						},
-						["spacing"] = 15,
-						["space"] = 16,
+						["height"] = 45,
 						["buffs"] = {
 							["xOffset"] = -1,
 							["yOffset"] = 11,
 							["perrow"] = 5,
 						},
-						["height"] = 45,
+						["space"] = 16,
 						["width"] = 200,
 					},
 				},
@@ -2801,10 +2739,68 @@ ElvDB = {
 				},
 				["minimapBottomLeft"] = true,
 			},
-			["clickset"] = {
-				["spec2"] = {
-					["type2"] = "复苏之雾",
+			["actionbar"] = {
+				["bar3"] = {
+					["buttons"] = 12,
+					["buttonspacing"] = 2,
+					["backdrop"] = false,
+					["buttonsize"] = 32,
+					["backdropSpacing"] = 0,
 				},
+				["bar6"] = {
+					["backdropSpacing"] = 4,
+				},
+				["bar2"] = {
+					["enabled"] = true,
+					["buttonspacing"] = 2,
+					["buttonsPerRow"] = 6,
+					["backdropSpacing"] = 0,
+					["buttonsize"] = 32,
+				},
+				["bar1"] = {
+					["backdrop"] = false,
+					["buttonspacing"] = 2,
+					["buttonsPerRow"] = 6,
+					["buttonsize"] = 32,
+					["backdropSpacing"] = 0,
+				},
+				["bar8"] = {
+					["backdropSpacing"] = 4,
+				},
+				["bar5"] = {
+					["showGrid"] = false,
+					["buttonspacing"] = 2,
+					["buttonsize"] = 32,
+					["backdrop"] = false,
+					["backdropSpacing"] = 0,
+				},
+				["bar4"] = {
+					["buttonspacing"] = 2,
+					["buttonsize"] = 32,
+					["showGrid"] = false,
+					["buttonsPerRow"] = 6,
+					["backdrop"] = false,
+					["backdropSpacing"] = 0,
+				},
+				["bar7"] = {
+					["backdropSpacing"] = 4,
+				},
+				["barPet"] = {
+					["buttonspacing"] = 2,
+					["buttonsPerRow"] = 6,
+					["backdrop"] = false,
+					["backdropSpacing"] = 0,
+				},
+				["bar9"] = {
+					["backdropSpacing"] = 4,
+				},
+				["stanceBar"] = {
+					["enabled"] = false,
+					["backdropSpacing"] = 4,
+					["buttonsize"] = 38,
+				},
+				["euiabstyle"] = "High",
+				["backdropSpacingConverted"] = true,
 			},
 			["nameplates"] = {
 				["cooldown"] = {
@@ -3368,72 +3364,6 @@ ElvDB = {
 						["threatStyle"] = "NONE",
 						["width"] = 122,
 					},
-					["assist"] = {
-						["enable"] = false,
-					},
-					["party"] = {
-						["horizontalSpacing"] = 3,
-						["debuffs"] = {
-							["anchorPoint"] = "BOTTOM",
-							["numrows"] = 4,
-							["perrow"] = 1,
-						},
-						["power"] = {
-							["text_format"] = "",
-						},
-						["enable"] = false,
-						["healPrediction"] = true,
-						["growthDirection"] = "RIGHT_DOWN",
-						["infoPanel"] = {
-							["enable"] = true,
-						},
-						["health"] = {
-							["attachTextTo"] = "InfoPanel",
-							["orientation"] = "VERTICAL",
-							["text_format"] = "[healthcolor][health:current]",
-							["position"] = "RIGHT",
-						},
-						["name"] = {
-							["attachTextTo"] = "InfoPanel",
-							["text_format"] = "[namecolor][name:short]",
-							["position"] = "LEFT",
-						},
-						["width"] = 110,
-						["height"] = 59,
-						["verticalSpacing"] = 0,
-						["roleIcon"] = {
-							["position"] = "TOPRIGHT",
-						},
-						["rdebuffs"] = {
-							["font"] = "Expressway",
-						},
-					},
-					["raid40"] = {
-						["rdebuffs"] = {
-							["font"] = "Expressway",
-						},
-					},
-					["focus"] = {
-						["infoPanel"] = {
-							["height"] = 17,
-							["enable"] = true,
-						},
-						["name"] = {
-							["attachTextTo"] = "InfoPanel",
-							["position"] = "LEFT",
-						},
-						["castbar"] = {
-							["iconSize"] = 26,
-							["width"] = 122,
-						},
-						["height"] = 56,
-						["health"] = {
-							["attachTextTo"] = "InfoPanel",
-							["text_format"] = "[healthcolor][health:current]",
-						},
-						["threatStyle"] = "NONE",
-						["width"] = 189,
-					},
 					["target"] = {
 						["debuffs"] = {
 							["perrow"] = 7,
@@ -3464,37 +3394,6 @@ ElvDB = {
 							["iconSize"] = 54,
 							["iconAttached"] = false,
 						},
-					},
-					["raid"] = {
-						["roleIcon"] = {
-							["position"] = "RIGHT",
-						},
-						["debuffs"] = {
-							["enable"] = true,
-							["sizeOverride"] = 27,
-							["perrow"] = 4,
-						},
-						["rdebuffs"] = {
-							["enable"] = false,
-							["font"] = "Expressway",
-						},
-						["growthDirection"] = "UP_RIGHT",
-						["name"] = {
-							["position"] = "LEFT",
-						},
-						["width"] = 140,
-						["height"] = 28,
-						["health"] = {
-							["yOffset"] = -6,
-						},
-						["visibility"] = "[nogroup] hide;show",
-						["groupsPerRowCol"] = 5,
-					},
-					["arena"] = {
-						["castbar"] = {
-							["width"] = 246,
-						},
-						["spacing"] = 26,
 					},
 					["player"] = {
 						["debuffs"] = {
@@ -3527,6 +3426,103 @@ ElvDB = {
 						["name"] = {
 							["attachTextTo"] = "InfoPanel",
 							["text_format"] = "[namecolor][name]",
+						},
+					},
+					["raid40"] = {
+						["rdebuffs"] = {
+							["font"] = "Expressway",
+						},
+					},
+					["focus"] = {
+						["infoPanel"] = {
+							["height"] = 17,
+							["enable"] = true,
+						},
+						["name"] = {
+							["attachTextTo"] = "InfoPanel",
+							["position"] = "LEFT",
+						},
+						["castbar"] = {
+							["iconSize"] = 26,
+							["width"] = 122,
+						},
+						["height"] = 56,
+						["health"] = {
+							["attachTextTo"] = "InfoPanel",
+							["text_format"] = "[healthcolor][health:current]",
+						},
+						["threatStyle"] = "NONE",
+						["width"] = 189,
+					},
+					["assist"] = {
+						["enable"] = false,
+					},
+					["arena"] = {
+						["castbar"] = {
+							["width"] = 246,
+						},
+						["spacing"] = 26,
+					},
+					["raid"] = {
+						["roleIcon"] = {
+							["position"] = "RIGHT",
+						},
+						["debuffs"] = {
+							["enable"] = true,
+							["sizeOverride"] = 27,
+							["perrow"] = 4,
+						},
+						["rdebuffs"] = {
+							["enable"] = false,
+							["font"] = "Expressway",
+						},
+						["growthDirection"] = "UP_RIGHT",
+						["name"] = {
+							["position"] = "LEFT",
+						},
+						["width"] = 140,
+						["height"] = 28,
+						["health"] = {
+							["yOffset"] = -6,
+						},
+						["visibility"] = "[nogroup] hide;show",
+						["groupsPerRowCol"] = 5,
+					},
+					["party"] = {
+						["horizontalSpacing"] = 3,
+						["debuffs"] = {
+							["anchorPoint"] = "BOTTOM",
+							["numrows"] = 4,
+							["perrow"] = 1,
+						},
+						["power"] = {
+							["text_format"] = "",
+						},
+						["enable"] = false,
+						["healPrediction"] = true,
+						["growthDirection"] = "RIGHT_DOWN",
+						["infoPanel"] = {
+							["enable"] = true,
+						},
+						["name"] = {
+							["attachTextTo"] = "InfoPanel",
+							["text_format"] = "[namecolor][name:short]",
+							["position"] = "LEFT",
+						},
+						["health"] = {
+							["attachTextTo"] = "InfoPanel",
+							["orientation"] = "VERTICAL",
+							["text_format"] = "[healthcolor][health:current]",
+							["position"] = "RIGHT",
+						},
+						["width"] = 110,
+						["height"] = 59,
+						["verticalSpacing"] = 0,
+						["roleIcon"] = {
+							["position"] = "TOPRIGHT",
+						},
+						["rdebuffs"] = {
+							["font"] = "Expressway",
 						},
 					},
 				},
@@ -3590,7 +3586,10 @@ ElvDB = {
 					["buttonsize"] = 38,
 				},
 			},
-			["layoutSet"] = "dpsMelee",
+			["nameplates"] = {
+				["filters"] = {
+				},
+			},
 			["bags"] = {
 				["countFontSize"] = 9,
 				["itemLevelFontSize"] = 9,
@@ -3606,10 +3605,7 @@ ElvDB = {
 				["tapFontSize"] = 11,
 				["panelBackdrop"] = "HIDEBOTH",
 			},
-			["nameplates"] = {
-				["filters"] = {
-				},
-			},
+			["layoutSet"] = "dpsMelee",
 		},
 		["test"] = {
 			["databars"] = {
@@ -4075,134 +4071,6 @@ ElvDB = {
 						},
 						["width"] = 150,
 					},
-					["player"] = {
-						["debuffs"] = {
-							["enable"] = false,
-						},
-						["portrait"] = {
-							["camDistanceScale"] = 0.65,
-						},
-						["power"] = {
-							["xOffset"] = 0,
-							["yOffset"] = 2,
-							["height"] = 8,
-							["position"] = "BOTTOMRIGHT",
-						},
-						["width"] = 250,
-						["health"] = {
-							["position"] = "BOTTOMLEFT",
-							["yOffset"] = 2,
-						},
-						["castbar"] = {
-							["height"] = 25,
-							["width"] = 400,
-						},
-						["height"] = 60,
-						["threatStyle"] = "BORDERS",
-						["classbar"] = {
-							["height"] = 9,
-						},
-						["aurabar"] = {
-							["enable"] = false,
-						},
-					},
-					["boss"] = {
-						["width"] = 200,
-						["debuffs"] = {
-							["numrows"] = 1,
-							["perrow"] = 5,
-							["xOffset"] = -1,
-							["yOffset"] = -12,
-						},
-						["castbar"] = {
-							["height"] = 10,
-							["width"] = 200,
-							["latency"] = false,
-						},
-						["spacing"] = 15,
-						["height"] = 45,
-						["buffs"] = {
-							["xOffset"] = -1,
-							["perrow"] = 5,
-							["yOffset"] = 11,
-						},
-						["space"] = 16,
-						["mouseGlow"] = false,
-					},
-					["focus"] = {
-						["height"] = 45,
-						["power"] = {
-							["height"] = 8,
-						},
-						["width"] = 180,
-						["castbar"] = {
-							["width"] = 180,
-						},
-					},
-					["assist"] = {
-						["enable"] = false,
-					},
-					["raid"] = {
-						["raidWideSorting"] = false,
-						["name"] = {
-							["fontSize"] = 12,
-						},
-						["width"] = 120,
-						["height"] = 50,
-						["healPrediction"] = {
-							["enable"] = true,
-						},
-						["rdebuffs"] = {
-							["size"] = 24,
-						},
-						["groupsPerRowCol"] = 2,
-					},
-					["target"] = {
-						["debuffs"] = {
-							["anchorPoint"] = "TOPLEFT",
-							["attachTo"] = "FRAME",
-						},
-						["portrait"] = {
-							["camDistanceScale"] = 0.65,
-						},
-						["castbar"] = {
-							["height"] = 40,
-							["width"] = 800,
-							["InterruptSound"] = true,
-						},
-						["range"] = {
-							["position"] = "TOPLEFT",
-							["offsetY"] = -3,
-						},
-						["width"] = 250,
-						["name"] = {
-							["xOffset"] = 2,
-							["position"] = "BOTTOMLEFT",
-							["text_format"] = "[namecolor][name]",
-							["yOffset"] = 2,
-						},
-						["health"] = {
-							["xOffset"] = 0,
-							["position"] = "TOPRIGHT",
-							["yOffset"] = -3,
-						},
-						["power"] = {
-							["xOffset"] = 0,
-							["height"] = 8,
-							["yOffset"] = 2,
-						},
-						["orientation"] = "LEFT",
-						["buffs"] = {
-							["anchorPoint"] = "TOPLEFT",
-							["selfBuffs"] = true,
-							["attachTo"] = "DEBUFFS",
-						},
-						["height"] = 60,
-						["aurabar"] = {
-							["enable"] = false,
-							["selfBuffs"] = true,
-						},
-					},
 					["party"] = {
 						["roleIcon"] = {
 							["xOffset"] = 2,
@@ -4240,6 +4108,134 @@ ElvDB = {
 							["width"] = 180,
 						},
 					},
+					["boss"] = {
+						["width"] = 200,
+						["debuffs"] = {
+							["numrows"] = 1,
+							["perrow"] = 5,
+							["xOffset"] = -1,
+							["yOffset"] = -12,
+						},
+						["spacing"] = 15,
+						["castbar"] = {
+							["height"] = 10,
+							["width"] = 200,
+							["latency"] = false,
+						},
+						["space"] = 16,
+						["buffs"] = {
+							["xOffset"] = -1,
+							["perrow"] = 5,
+							["yOffset"] = 11,
+						},
+						["height"] = 45,
+						["mouseGlow"] = false,
+					},
+					["focus"] = {
+						["height"] = 45,
+						["power"] = {
+							["height"] = 8,
+						},
+						["width"] = 180,
+						["castbar"] = {
+							["width"] = 180,
+						},
+					},
+					["target"] = {
+						["debuffs"] = {
+							["anchorPoint"] = "TOPLEFT",
+							["attachTo"] = "FRAME",
+						},
+						["portrait"] = {
+							["camDistanceScale"] = 0.65,
+						},
+						["castbar"] = {
+							["height"] = 40,
+							["width"] = 800,
+							["InterruptSound"] = true,
+						},
+						["range"] = {
+							["position"] = "TOPLEFT",
+							["offsetY"] = -3,
+						},
+						["width"] = 250,
+						["name"] = {
+							["xOffset"] = 2,
+							["position"] = "BOTTOMLEFT",
+							["text_format"] = "[namecolor][name]",
+							["yOffset"] = 2,
+						},
+						["health"] = {
+							["xOffset"] = 0,
+							["position"] = "TOPRIGHT",
+							["yOffset"] = -3,
+						},
+						["power"] = {
+							["xOffset"] = 0,
+							["height"] = 8,
+							["yOffset"] = 2,
+						},
+						["height"] = 60,
+						["buffs"] = {
+							["anchorPoint"] = "TOPLEFT",
+							["selfBuffs"] = true,
+							["attachTo"] = "DEBUFFS",
+						},
+						["orientation"] = "LEFT",
+						["aurabar"] = {
+							["enable"] = false,
+							["selfBuffs"] = true,
+						},
+					},
+					["raid"] = {
+						["raidWideSorting"] = false,
+						["name"] = {
+							["fontSize"] = 12,
+						},
+						["width"] = 120,
+						["height"] = 50,
+						["healPrediction"] = {
+							["enable"] = true,
+						},
+						["rdebuffs"] = {
+							["size"] = 24,
+						},
+						["groupsPerRowCol"] = 2,
+					},
+					["assist"] = {
+						["enable"] = false,
+					},
+					["player"] = {
+						["debuffs"] = {
+							["enable"] = false,
+						},
+						["portrait"] = {
+							["camDistanceScale"] = 0.65,
+						},
+						["power"] = {
+							["xOffset"] = 0,
+							["yOffset"] = 2,
+							["height"] = 8,
+							["position"] = "BOTTOMRIGHT",
+						},
+						["width"] = 250,
+						["health"] = {
+							["position"] = "BOTTOMLEFT",
+							["yOffset"] = 2,
+						},
+						["castbar"] = {
+							["height"] = 25,
+							["width"] = 400,
+						},
+						["height"] = 60,
+						["threatStyle"] = "BORDERS",
+						["classbar"] = {
+							["height"] = 9,
+						},
+						["aurabar"] = {
+							["enable"] = false,
+						},
+					},
 				},
 			},
 			["datatexts"] = {
@@ -4271,6 +4267,33 @@ ElvDB = {
 					["TopDataTextsBar4"] = "",
 				},
 				["minimapBottomLeft"] = true,
+			},
+			["clickset"] = {
+				["spec2"] = {
+					["type2"] = "复苏之雾",
+				},
+			},
+			["nameplates"] = {
+				["cooldown"] = {
+					["fonts"] = {
+						["font"] = "EUI",
+					},
+				},
+				["units"] = {
+					["PLAYER"] = {
+						["debuffs"] = {
+							["enable"] = false,
+						},
+						["buffs"] = {
+							["enable"] = false,
+							["baseHeight"] = 35,
+						},
+					},
+				},
+			},
+			["infobar"] = {
+				["height"] = 26,
+				["width"] = 120,
 			},
 			["actionbar"] = {
 				["bar3"] = {
@@ -4325,33 +4348,6 @@ ElvDB = {
 					["buttonsPerRow"] = 6,
 					["backdropSpacing"] = 0,
 					["backdrop"] = false,
-				},
-			},
-			["nameplates"] = {
-				["cooldown"] = {
-					["fonts"] = {
-						["font"] = "EUI",
-					},
-				},
-				["units"] = {
-					["PLAYER"] = {
-						["debuffs"] = {
-							["enable"] = false,
-						},
-						["buffs"] = {
-							["enable"] = false,
-							["baseHeight"] = 35,
-						},
-					},
-				},
-			},
-			["infobar"] = {
-				["height"] = 26,
-				["width"] = 120,
-			},
-			["clickset"] = {
-				["spec2"] = {
-					["type2"] = "复苏之雾",
 				},
 			},
 			["tooltip"] = {
@@ -5131,6 +5127,14 @@ ElvPrivateDB = {
 			["general"] = {
 				["dmgfont"] = "EUI",
 			},
+			["sle"] = {
+				["pvpreadydialogreset"] = true,
+				["install_complete"] = "3.49",
+				["characterGoldsSorting"] = {
+					["燃烧之刃"] = {
+					},
+				},
+			},
 			["install_complete"] = "10.29",
 		},
 		["币开头小德 - 燃烧之刃"] = {
@@ -5140,18 +5144,31 @@ ElvPrivateDB = {
 			["install_complete"] = "10.28",
 		},
 		["Dhuntress - 燃烧之刃"] = {
-			["general"] = {
-				["pixelPerfect"] = true,
-			},
 			["install_complete"] = "10.28",
 		},
 		["地经萨 - 燃烧之刃"] = {
+			["sle"] = {
+				["pvpreadydialogreset"] = true,
+				["characterGoldsSorting"] = {
+					["燃烧之刃"] = {
+					},
+				},
+				["install_complete"] = "3.49",
+			},
 			["install_complete"] = "10.29",
 		},
 		["李书炆 - 燃烧之刃"] = {
 			["install_complete"] = "10.83",
 		},
 		["牛奶酒 - 燃烧之刃"] = {
+			["sle"] = {
+				["pvpreadydialogreset"] = true,
+				["characterGoldsSorting"] = {
+					["燃烧之刃"] = {
+					},
+				},
+				["install_complete"] = "3.49",
+			},
 			["install_complete"] = "10.28",
 		},
 		["弗瑞德姆 - 燃烧之刃"] = {

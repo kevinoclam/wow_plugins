@@ -13,7 +13,10 @@ MEETINGSTONE_CHARACTER_DB = {
 				},
 			},
 			["version"] = "80000.07",
-			["lastSearchCode"] = "1-124-419-0",
+			["lastSearchCode"] = "1-0-0-0",
+			["searchHistoryList"] = {
+				"1-0-0-0", -- [1]
+			},
 			["searchInputHistory"] = {
 				["6-0-0-0"] = {
 					"p4", -- [1]

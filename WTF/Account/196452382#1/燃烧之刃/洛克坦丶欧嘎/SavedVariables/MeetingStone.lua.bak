@@ -13,7 +13,10 @@ MEETINGSTONE_CHARACTER_DB = {
 					["scale"] = 1,
 				},
 			},
-			["lastSearchCode"] = "1-124-419-0",
+			["searchHistoryList"] = {
+				"1-0-0-0", -- [1]
+			},
+			["lastSearchCode"] = "1-0-0-0",
 			["searchInputHistory"] = {
 				["6-0-0-0"] = {
 					"p4", -- [1]

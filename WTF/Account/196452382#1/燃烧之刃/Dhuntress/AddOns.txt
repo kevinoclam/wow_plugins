@@ -85,7 +85,7 @@ Simulationcraft: disabled
 ElvUI_TankHealth: enabled
 AngryKeystones: enabled
 DBM-TrialofValor: enabled
-ExRT: disabled
+ExRT: enabled
 RCLootCouncil: disabled
 RCLootCouncil_GroupGear: disabled
 RelicInspector: enabled
@@ -106,3 +106,18 @@ DBM-Azeroth-BfA: enabled
 DBM-Party-BfA: enabled
 DBM-Uldir: enabled
 ElvUI_EverySecondCounts: disabled
+AdiBags: enabled
+AdiBags_Config: enabled
+AdiBags_ByExpansion_WoW: enabled
+AdiBags_ByExpansion_TBC: enabled
+AdiBags_ByExpansion_Wrath: enabled
+AdiBags_ByExpansion_Cata: enabled
+AdiBags_ByExpansion_MoP: enabled
+AdiBags_ByExpansion_WoD: enabled
+AdiBags_ByExpansion_Legion: enabled
+AdiBags_ByExpansion_BfA: enabled
+AdiBags_ByExpansion: enabled
+MethodDungeonTools: enabled
+ElvUI_SLE: enabled
+DBM-ZuldazarRaid: enabled
+DBM-CrucibleofStorms: enabled
