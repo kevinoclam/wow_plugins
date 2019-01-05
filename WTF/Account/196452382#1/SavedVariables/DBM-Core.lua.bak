@@ -55,7 +55,7 @@ DBM_AllSavedOptions = {
 		},
 		["DontShowSpecialWarnings"] = false,
 		["WarningAlphabetical"] = true,
-		["ShowWarningsInChat"] = true,
+		["HUDTexture3"] = "highlight",
 		["ShowMinimapButton"] = true,
 		["MoviesSeen"] = {
 		},
@@ -68,7 +68,7 @@ DBM_AllSavedOptions = {
 		},
 		["DebugMode"] = false,
 		["DontShowTargetAnnouncements"] = true,
-		["FilterTrashWarnings2"] = true,
+		["ShowWarningsInChat"] = true,
 		["LogOnlyRaidBosses"] = false,
 		["ShowCombatLogMessage"] = true,
 		["SpecialWarningFontCol"] = {
@@ -207,7 +207,7 @@ DBM_AllSavedOptions = {
 		["ShortTimerText"] = true,
 		["RangeFrameUpdates"] = "Average",
 		["AutoCorrectTimer"] = false,
-		["MISTSTWMessageShown"] = false,
+		["DontPlayPTCountdown"] = false,
 		["WarningY"] = 260,
 		["DontRestoreRange"] = false,
 		["DontShowUserTimers"] = false,
@@ -216,7 +216,7 @@ DBM_AllSavedOptions = {
 		["WhisperStats"] = false,
 		["VoiceOverSpecW2"] = "DefaultOnly",
 		["WarningIconLeft"] = true,
-		["HUDAlpha3"] = 0.5,
+		["MISTSTWMessageShown"] = false,
 		["SpecialWarningFlashAlph5"] = 0.5,
 		["SpecialWarningDuration2"] = 1.5,
 		["HealthFrameWidth"] = 200,
@@ -245,7 +245,7 @@ DBM_AllSavedOptions = {
 		["BonusFilter"] = "Never",
 		["ShowKillMessage"] = true,
 		["SpecialWarningFlashRepeat2"] = false,
-		["DontPlayPTCountdown"] = false,
+		["HUDAlpha3"] = 0.5,
 		["SpecialWarningFlashRepeat5"] = true,
 		["AutoRespond"] = false,
 		["EventDungMusicMythicFilter"] = true,
@@ -301,7 +301,7 @@ DBM_AllSavedOptions = {
 		["ShowWipeMessage"] = true,
 		["NewsMessageShown"] = 12,
 		["StripServerName"] = true,
-		["HUDTexture3"] = "highlight",
+		["FilterTrashWarnings2"] = true,
 		["FilterInterruptNoteName"] = false,
 		["HPFrameX"] = 42.4446296691895,
 		["HUDAlpha2"] = 0.5,
@@ -311,4 +311,5 @@ DBM_AllSavedOptions = {
 	},
 }
 DBM_MinimapIcon = {
+	["minimapPos"] = 169.908956941759,
 }

@@ -8,8 +8,8 @@ W: 365
 H: 240
 Frame: DetailsPlayerDetailsWindow
 FrameLevel: 1
-Anchor: BOTTOM
-X: 42
-Y: 51
+Anchor: CENTER
+X: 7
+Y: 18
 W: 790
 H: 454

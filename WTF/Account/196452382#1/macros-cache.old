@@ -1,5 +1,5 @@
-VER 3 000000000000004F " " "INV_Misc_QuestionMark"
-/cast 活血术,法力茶
+VER 3 0000000000000052 " " "132172"
+/petmoveto
 END
 VER 3 000000000000005B " " "INV_Misc_QuestionMark"
 #showtooltip 夺魂
@@ -298,8 +298,10 @@ VER 3 000000000000004E " " "INV_Misc_QuestionMark"
 /use 15
 /cancelaura 降落伞
 END
-VER 3 0000000000000052 " " "132172"
-/petmoveto
+VER 3 000000000000005C " " "INV_Misc_QuestionMark"
+#showtooltip 心脏打击
+/startattack
+/cast 心脏打击
 END
 VER 3 0000000000000050 " " "INV_Misc_QuestionMark"
 #showtooltip 延时之力药水
@@ -311,10 +313,8 @@ VER 3 0000000000000051 " " "INV_Misc_QuestionMark"
 #showtooltip 恶魔传送门
 /cast [@cursor] 恶魔传送门
 END
-VER 3 000000000000005C " " "INV_Misc_QuestionMark"
-#showtooltip 心脏打击
-/startattack
-/cast 心脏打击
+VER 3 0000000000000073 "  " "135857"
+/cast [@cursor] 暴风雪
 END
 VER 3 000000000000006F "  " "INV_Misc_QuestionMark"
 #showtooltip 误导
@@ -335,18 +335,15 @@ VER 3 0000000000000072 "  " "132109"
 /施放 鲁莽
 /USE 14
 END
-VER 3 0000000000000073 "  " "135857"
-/cast [@cursor] 暴风雪
-END
-VER 3 0000000000000074 "  " "INV_Misc_QuestionMark"
-#showtooltip 英勇飞跃
-/cast [@cursor] 英勇飞跃
-END
 VER 3 0000000000000075 "  " "INV_Misc_QuestionMark"
 #showtooltip 猛击
 /startattack
 /cast 猛击
 /use 黑暗前途指环
+END
+VER 3 0000000000000074 "  " "INV_Misc_QuestionMark"
+#showtooltip 英勇飞跃
+/cast [@cursor] 英勇飞跃
 END
 VER 3 0000000000000076 "  " "463829"
 /施放 集结呐喊
@@ -354,6 +351,11 @@ VER 3 0000000000000076 "  " "463829"
 END
 VER 3 0000000000000077 "    " "135826"
 /cast [@cursor] 烈焰风暴
+END
+VER 3 000000000000004F " 红瓶，糖" "236872"
+#showtooltips
+/use 海滨治疗药水
+/use 治疗石
 END
 VER 3 000000000000002E "321654" "132724"
 /跟随 安非他命丶

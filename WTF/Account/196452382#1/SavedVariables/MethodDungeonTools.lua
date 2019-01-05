@@ -225,6 +225,9 @@ MethodDungeonToolsDB = {
 		["anchorTo"] = "CENTER",
 		["anchorFrom"] = "CENTER",
 		["currentDifficulty"] = 11,
+		["minimap"] = {
+			["minimapPos"] = 195.101157259259,
+		},
 		["xoffset"] = -228.749938964844,
 		["yoffset"] = 113.250030517578,
 	},

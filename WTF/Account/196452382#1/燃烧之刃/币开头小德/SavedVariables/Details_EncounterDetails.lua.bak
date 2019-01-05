@@ -4076,13 +4076,14 @@ EncounterDetailsDB = {
 			},
 			["source"] = "符文武器",
 		},
-		[205862] = {
+		[203816] = {
 			["school"] = 1,
+			["type"] = "BUFF",
 			["token"] = {
+				["SPELL_AURA_APPLIED"] = true,
 				["SPELL_CAST_SUCCESS"] = true,
-				["SPELL_CAST_START"] = true,
 			},
-			["source"] = "克洛苏斯",
+			["source"] = "复活的战士",
 		},
 		[226194] = {
 			["school"] = 1,
@@ -4091,13 +4092,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "萨维斯",
 		},
-		[230414] = {
-			["school"] = 4,
-			["type"] = "DEBUFF",
+		[205862] = {
+			["school"] = 1,
 			["token"] = {
-				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_PERIODIC_DAMAGE"] = true,
+				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_CAST_START"] = true,
 			},
+			["source"] = "克洛苏斯",
 		},
 		[193594] = {
 			["school"] = 32,
@@ -4295,14 +4296,13 @@ EncounterDetailsDB = {
 			},
 			["source"] = "斯考匹隆",
 		},
-		[203816] = {
-			["school"] = 1,
-			["type"] = "BUFF",
+		[230414] = {
+			["school"] = 4,
+			["type"] = "DEBUFF",
 			["token"] = {
 				["SPELL_AURA_APPLIED"] = true,
-				["SPELL_CAST_SUCCESS"] = true,
+				["SPELL_PERIODIC_DAMAGE"] = true,
 			},
-			["source"] = "复活的战士",
 		},
 		[219049] = {
 			["school"] = 8,

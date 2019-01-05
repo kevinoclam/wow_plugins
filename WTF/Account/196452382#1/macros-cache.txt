@@ -1,5 +1,7 @@
 VER 3 0000000000000052 " " "132172"
-/petmoveto
+/showtooltips
+/tar 青龙雕像
+/cast 嚎镇八方
 END
 VER 3 000000000000005B " " "INV_Misc_QuestionMark"
 #showtooltip 夺魂

@@ -10,6 +10,8 @@ MEETINGSTONE_CHARACTER_DB = {
 				"1-124-420-0", -- [2]
 				"2-112-445-0", -- [3]
 			},
+			["version"] = "80000.07",
+			["appShine"] = "70100.09",
 			["settings"] = {
 				["storage"] = {
 					["y"] = 0,
@@ -17,8 +19,6 @@ MEETINGSTONE_CHARACTER_DB = {
 					["scale"] = 1,
 				},
 			},
-			["version"] = "80000.07",
-			["appShine"] = "70100.09",
 			["advShine"] = "70100.01",
 			["lastSearchCode"] = "2-128-473-0",
 			["searchInputHistory"] = {

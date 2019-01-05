@@ -1,71 +1,32 @@
-VER 3 0100000000000003 "DB_BrewMaster_AoE" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/click DB_BrewMaster_AoE
-END
-VER 3 0100000000000004 "DB_BrewMaster_ST" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/click DB_BrewMaster_ST
-END
-VER 3 0100000000000001 "DB_winsingle" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/click DB_winsingle
-END
-VER 3 0100000000000002 "DB_WW" "INV_MISC_QUESTIONMARK"
-#showtooltip
-/click DB_WW
-END
-VER 3 010000000000000C "坚定" "INV_MISC_QUESTIONMARK"
-/castsequence reset=combat 醉酿投,火焰之息,幻灭猛击,猛虎掌,猛虎掌,幻灭猛击,猛虎掌，醉酿投
-END
-VER 3 010000000000000D "披风" "1314773"
-/use 15
-/cancelaura 降落伞
-/施放 护体胆汁
-END
-VER 3 010000000000000E "攻击" "INV_Misc_QuestionMark"
-#showtooltip 
-/petattack
-/施放 疾跑
-/施放 残废术
-/施放 凤凰之心(狂野技能)
-END
-VER 3 010000000000000F "显示speed" "413588"
-/run for a,b in next,{GetUnitSpeed"player"},a do print(({"当前移动速度","地面速度","飞行速度","游泳速度"})[a],b*100/7-100)end
-END
-VER 3 0100000000000010 "替身" "458735"
-/cast 护体胆汁
-/cast 血肉之盾
-END
-VER 3 0100000000000011 "末日仪式" "134400"
-/cast 末日仪式
-END
-VER 3 0100000000000012 "正义" "135896"
-/cast 正义盾击
-/cast 圣洁护盾
-/cast 奉献
+VER 3 0100000000000015 "加速" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover]迅如猛虎
 END
 VER 3 0100000000000007 "氤氲" "INV_MISC_QUESTIONMARK"
 #showtooltips
-/cast [target=mouseover]氤氲之雾
+/cast [target=mouseover,help][]氤氲之雾
 END
 VER 3 0100000000000008 "活血" "INV_MISC_QUESTIONMARK"
 #showtooltips
-/cast [target=mouseover]活血术
+/cast [target=mouseover,help][]活血术
+END
+VER 3 0100000000000013 "猛虎幻灭" "INV_MISC_QUESTIONMARK"
+/castsequence reset=8/combat 猛虎掌,猛虎掌,猛虎掌,幻灭踢
 END
 VER 3 0100000000000009 "贯通" "INV_MISC_QUESTIONMARK"
 #showtooltips
-/cast [target=mouseover]真气贯通
+/tar mouseover
+/cast 抚慰之雾
 END
-VER 3 0100000000000005 "连击" "INV_MISC_QUESTIONMARK"
-/castsequence reset=combat 醉酿投,幻灭猛击,火焰之息,猛虎掌,猛虎掌,幻灭猛击,碧玉疾风,醉酿投,猛虎掌,幻灭猛击,火焰之息,幻灭猛击,碧玉疾风,醉酿投,猛虎掌,猛虎掌,幻灭猛击,碧玉疾风,火焰之息,幻灭猛击,醉酿投,猛虎掌,幻灭猛击,猛虎掌,碧玉疾风,幻灭猛击
-END
-VER 3 010000000000000A "连击2" "INV_MISC_QUESTIONMARK"
-/castsequence reset=combat 醉酿投,铁骨酒,幻灭猛击,火焰之息,猛虎掌,幻灭猛击,猛虎掌,醉酿投,铁骨酒,幻灭猛击,猛虎掌,猛虎掌,幻灭猛击,火焰之息,醉酿投,铁骨酒,幻灭猛击,猛虎掌,猛虎掌,幻灭猛击,猛虎掌
-END
-VER 3 010000000000000B "迷踪步" "INV_MISC_QUESTIONMARK"
-/castsequence reset=combat 醉酿投,幻灭猛击,火焰之息,猛虎掌,猛虎掌,幻灭猛击,碧玉疾风,醉酿投,猛虎掌,幻灭猛击,猛虎掌,幻灭猛击,碧玉疾风,醉酿投,猛虎掌,猛虎掌,幻灭猛击,碧玉疾风,火焰之息,幻灭猛击,醉酿投,猛虎掌,幻灭猛击,猛虎掌,碧玉疾风,幻灭猛击
+VER 3 0100000000000016 "雕像" "INV_MISC_QUESTIONMARK"
+#showtooltip
+/cast [@cursor] 青龙雕像
 END
 VER 3 0100000000000006 "雾" "INV_MISC_QUESTIONMARK"
 #showtooltips
 /cast [target=mouseover]复苏之雾
+END
+VER 3 0100000000000014 "驱散" "INV_MISC_QUESTIONMARK"
+#showtooltips
+/cast [target=mouseover,help][]清创生血
 END

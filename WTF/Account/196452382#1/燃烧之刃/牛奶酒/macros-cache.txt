@@ -2,6 +2,11 @@ VER 3 0100000000000015 "加速" "INV_MISC_QUESTIONMARK"
 #showtooltips
 /cast [target=mouseover]迅如猛虎
 END
+VER 3 0100000000000017 "嘲讽雕像" "INV_MISC_QUESTIONMARK"
+/showtooltips
+/tar 青龙雕像
+/cast 嚎镇八方
+END
 VER 3 0100000000000007 "氤氲" "INV_MISC_QUESTIONMARK"
 #showtooltips
 /cast [target=mouseover,help][]氤氲之雾
